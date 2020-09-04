@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+
+//variables
+$color-primary: #0065FC;
+$color-secondary: #DEEBFF;
+$color-background: #F2F2F2;
+$breakpoints: ("mobile":"599px");
+
+/*smartphone*/
+@mixin mobile-only {
+    @media only screen and (max-width: map-get($breakpoints , "mobile" )) {
+        @content;
+    }
+}
+
+//
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2%;
+    &:nth-child(1) {
+        flex-basis: 75%;
+        flex-shrink: 1;
+        text-align: left;
+        position: relative;
+    }
+    & #reservialogo {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        background-size: contain;
+        position: absolute;
+	    top: 2%;
+	    left: 2%;
+	    background-image: URL("./logos/Reservia3x.png");
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+    }
+    @include mobile-only {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    & a:nth-child(3):focus {
+        border: none;
+    }
+    @include mobile-only {
+        flex-wrap: wrap;
+        & a:nth-child(3) {
+            order: -2;
+            width: 100%;
+            color:blueviolet;
+            text-align: right;
+            &:focus {
+                border-top: none;
+                border-bottom: none;
+            }
+        }
+        & > a {
+            width: 50%;
+            color: red;
+            text-align: center;
+            &:focus {
+                border-bottom: 2px purple solid;
+                border-top: none;
+            }
+        }
+    } 
+    &__link {
+        display: inline-block;
+        padding: 10px; 
+        color: teal;
+        text-decoration: none;
+        &:hover {
+            border-top: 2px pink solid;
+        }  
+        &:focus {
+            border-top: 2px purple solid;
+        }
+    }
+}
+
+
+ 

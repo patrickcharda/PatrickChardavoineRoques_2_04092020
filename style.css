@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+/*smartphone*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+}
+.header:nth-child(1) {
+  flex-basis: 75%;
+  flex-shrink: 1;
+  text-align: left;
+  position: relative;
+}
+.header #reservialogo {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-size: contain;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background-image: URL("./logos/Reservia3x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media only screen and (max-width: 599px) {
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav a:nth-child(3):focus {
+  border: none;
+}
+@media only screen and (max-width: 599px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .nav a:nth-child(3) {
+    order: -2;
+    width: 100%;
+    color: blueviolet;
+    text-align: right;
+  }
+  .nav a:nth-child(3):focus {
+    border-top: none;
+    border-bottom: none;
+  }
+  .nav > a {
+    width: 50%;
+    color: red;
+    text-align: center;
+  }
+  .nav > a:focus {
+    border-bottom: 2px purple solid;
+    border-top: none;
+  }
+}
+.nav__link {
+  display: inline-block;
+  padding: 10px;
+  color: teal;
+  text-decoration: none;
+}
+.nav__link:hover {
+  border-top: 2px pink solid;
+}
+.nav__link:focus {
+  border-top: 2px purple solid;
+}
+
+/*# sourceMappingURL=style.css.map */
