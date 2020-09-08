@@ -47,6 +47,14 @@ $breakpoints: ("mobile":"576px");
 	    background-repeat: no-repeat;
 	    background-size: contain;
     }
+    & #reservialogosvg {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        position: absolute;
+	    top: 2%;
+	    left: 2%;
+    }
     @include mobile-only {
         flex-direction: column;
         justify-content: flex-start;
@@ -55,28 +63,27 @@ $breakpoints: ("mobile":"576px");
 }
 
 .nav {
-    & a {
-        font-weight: 600;
-    }
     display: flex;
     justify-content: flex-end;
     &__link {
         display: inline-block;
-        padding: 10px; 
+        padding: 30px; 
+        font-weight: 600;
         color: $color-unactivelink;
-        border-top: $color-unactiveborder;
+        border-top: 3px solid $color-unactiveborder;
         text-decoration: none;
         &:hover {
-            border-top: 2px solid $color-activeborder;
+            border-top: 3px solid $color-activeborder;
         }  
         &:focus {
             color: $color-activelink;
-            border-top: 2px solid $color-activeborder;
+            border-top: 3px solid $color-activeborder;
         }
     }
     & a:nth-child(3) {
         color: $color-primary;
         font-weight: bold;
+        border: none;
         &:focus {
             border: none;
         }
@@ -87,20 +94,22 @@ $breakpoints: ("mobile":"576px");
             width: 50%;
             color: $color-unactivelink;
             border: none;
+            border-bottom: 3px solid $color-unactiveborder;
             text-align: center;
             &:focus {
                 color: $color-activelink;
-                border-bottom: 2px solid $color-activeborder;
+                border-bottom: 3px solid $color-activeborder;
                 border-top: none;
             }
             &:hover {
-                border-bottom: 2px solid $color-primary;
+                border-bottom: 3px solid $color-primary;
                 border-top: none;
             }
         }
         & a:nth-child(3) {
             order: -2;
             width: 100%;
+            border: none;
             color: $color-primary;
             text-align: right;
             &:focus {
@@ -110,6 +119,69 @@ $breakpoints: ("mobile":"576px");
         }
     } 
 }
+main {
+    margin-left: 2%;
+    & h1 {
+        font-weight: 600;
+    }
+    & .h2 {
+        font-weight: bold;
+        font-size: 16px;
+    }
 
+}
+.searchbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 55px;
+    &__picto {
+        height: 55px;
+        padding: 14px;
+        padding-right: 24px;
+        padding-left: 24px;
+        margin: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 2px solid $color-background;
+        background-color: $color-background;
+        & i {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__input {
+        height: 55px;
+        padding: 15px;
+        margin: 0;
+        border: 2px solid $color-background;
+        border-right: none;
+        text-align: left;
+        &--border {
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+    &__submit {
+        height: 55px;
+        padding: 15px;
+        margin: 0;
+        border: 2px solid $color-primary;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: $color-primary;
+        color: #ffffff;
+        &--border {
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            background-color: $color-primary;
+            color: #ffffff;
+        }
+    }
+}
 
  
