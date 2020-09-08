@@ -2,11 +2,19 @@
 	box-sizing: border-box;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 //variables
 $color-primary: #0065FC;
+$color-activelink: #237AFC;
+$color-unactivelink: #727272;
+$color-unactiveborder: #F2F2F2;
+$color-activeborder: #0065FC;
 $color-secondary: #DEEBFF;
 $color-background: #F2F2F2;
-$breakpoints: ("mobile":"599px");
+$breakpoints: ("mobile":"576px");
 
 /*smartphone*/
 @mixin mobile-only {
@@ -47,45 +55,60 @@ $breakpoints: ("mobile":"599px");
 }
 
 .nav {
+    & a {
+        font-weight: 600;
+    }
     display: flex;
     justify-content: flex-end;
-    & a:nth-child(3):focus {
-        border: none;
+    &__link {
+        display: inline-block;
+        padding: 10px; 
+        color: $color-unactivelink;
+        border-top: $color-unactiveborder;
+        text-decoration: none;
+        &:hover {
+            border-top: 2px solid $color-activeborder;
+        }  
+        &:focus {
+            color: $color-activelink;
+            border-top: 2px solid $color-activeborder;
+        }
+    }
+    & a:nth-child(3) {
+        color: $color-primary;
+        font-weight: bold;
+        &:focus {
+            border: none;
+        }
     }
     @include mobile-only {
         flex-wrap: wrap;
+        & > a {
+            width: 50%;
+            color: $color-unactivelink;
+            border: none;
+            text-align: center;
+            &:focus {
+                color: $color-activelink;
+                border-bottom: 2px solid $color-activeborder;
+                border-top: none;
+            }
+            &:hover {
+                border-bottom: 2px solid $color-primary;
+                border-top: none;
+            }
+        }
         & a:nth-child(3) {
             order: -2;
             width: 100%;
-            color:blueviolet;
+            color: $color-primary;
             text-align: right;
             &:focus {
                 border-top: none;
                 border-bottom: none;
             }
         }
-        & > a {
-            width: 50%;
-            color: red;
-            text-align: center;
-            &:focus {
-                border-bottom: 2px purple solid;
-                border-top: none;
-            }
-        }
     } 
-    &__link {
-        display: inline-block;
-        padding: 10px; 
-        color: teal;
-        text-decoration: none;
-        &:hover {
-            border-top: 2px pink solid;
-        }  
-        &:focus {
-            border-top: 2px purple solid;
-        }
-    }
 }
 
 
