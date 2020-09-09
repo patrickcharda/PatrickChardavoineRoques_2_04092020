@@ -266,11 +266,33 @@ main {
                 background-color: #ffffff;
             }
         }
-    }
-    
+    }    
 }
-/*input {
-    width: auto;
-}*/
+.hebergement {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__ville {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--photo1 {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__populaire {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--photo2 {
+            width: 100px;
+            height: 100px;
+        }
+    }
 
+}
  

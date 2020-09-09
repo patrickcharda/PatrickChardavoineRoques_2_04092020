@@ -248,8 +248,31 @@ main .highlight2 {
   background-color: #ffffff;
 }
 
-/*input {
-    width: auto;
-}*/
+.hebergement {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hebergement__ville {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hebergement__ville--photo1 {
+  width: 100px;
+  height: 100px;
+}
+.hebergement__populaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hebergement__populaire--photo2 {
+  width: 100px;
+  height: 100px;
+}
 
 /*# sourceMappingURL=style.css.map */
