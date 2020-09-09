@@ -226,7 +226,6 @@ main .highlight2 {
 }
 
 .message {
-  margin-top: 35px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
