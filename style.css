@@ -238,6 +238,8 @@ main .highlight2 {
   width: 24px;
   border-radius: 12px;
   border: 0.5px solid #DEEBFF;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1em;
   color: #0065FC;
   font-weight: bold;
   margin-right: 4px;
