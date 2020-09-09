@@ -129,7 +129,7 @@ main {
         margin-bottom: -6px;
     }
     & .highlight2 {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 16px;
     }
 }
@@ -191,15 +191,24 @@ main {
 }
 .filtres {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    height: 50px;
+    & input {
+        border: none;
+        //color: red;
+        &.void {
+            //color: orange;
+        }
+    }
     &__inputpicto {
+        margin-bottom: 15px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 50px;
         padding: 0;
+        padding-right: 3px;
         border-top: solid 3px $color-background;
         border-bottom: solid 3px $color-background;
         border-right: solid 3px $color-background;
@@ -221,15 +230,45 @@ main {
             justify-content: center;
             align-items: center;
             border: none;
-            padding-right: 3px;
+            padding: 0;
+            padding-left: 5px;
         }
         &--insideinput {
-            border: none;
+            //border: none;
+            padding: 0;
             text-align: center;
-            //max-width: 125px;
         }
-
     }
 }
+
+.message {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__info {
+        &--picto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 24px;
+            width: 24px;
+            border-radius: 12px;
+            border: 0.5px solid $color-secondary;
+            color: $color-primary;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+        &--texte {
+            & #nblogements {
+                background-color: #ffffff;
+            }
+        }
+    }
+    
+}
+/*input {
+    width: auto;
+}*/
 
  
