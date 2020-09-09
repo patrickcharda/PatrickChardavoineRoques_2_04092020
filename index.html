@@ -33,43 +33,65 @@
 
     <main>
       <section class="search">
-          <h1>Trouvez votre Hébergement pour des vacances de rêve</h1> 
+          <h1 id="h1">Trouvez votre Hébergement pour des vacances de rêve</h1> 
           <p>En plein centre ville ou en pleine nature</p>
           <div class="searchbar">
               <div class="searchbar__picto">
                     <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="searchbar__input">
-                <input type="text" class="searchbar__input--border h2" value="Marseille, France">
+                <input type="text" class="searchbar__input--border highlight2" value="Marseille, France">
               </div>
               <div class="searchbar__submit">
-                  <button type="submit" class="searchbar__submit--border h2">
+                  <button type="submit" class="searchbar__submit--border highlight2">
                       Rechercher
                   </button>
               </div>
-          </div>  
+          </div>
+          <div class="filtres">
+            <div class="highlight2"> Filtres </div>
+            <div>&emsp;</div>
+            <div class="filtres__inputpicto">
+                <div class="filtres__inputpicto--left">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="filtres__inputpicto--right">
+                    <input type="text" value="Economique" class="filtres__inputpicto--insideinput highlight2" />
+                </div>
+            </div>
+            <div>&emsp;</div>
+            <div class="filtres__inputpicto">
+                <div class="filtres__inputpicto--left">
+                    <i class="fas fa-child"></i>
+                </div>
+                <div class="filtres__inputpicto--right">
+                    <input type="text" value="Familial" class="filtres__inputpicto--insideinput highlight2" />
+                </div>
+            </div>
+            <div>&emsp;</div>
+            <div class="filtres__inputpicto">
+                <div class="filtres__inputpicto--left">
+                    <i class="fas fa-heart"></i> 
+                </div>
+                <div class="filtres__inputpicto--right">
+                    <input type="text" value="Romantique" class="filtres__inputpicto--insideinput highlight2" />
+                </div>
+            </div>
+            <div>&emsp;</div>
+            <div class="filtres__inputpicto">
+                <div class="filtres__inputpicto--left">
+                    <i class="fas fa-dog"></i>  
+                </div>
+                <div class="filtres__inputpicto--right">
+                    <input type="text" value="Animaux autorisés" class="filtres__inputpicto--insideinput highlight2" />
+                </div>
+            </div>
+          </div> 
       </section>
 
     </main>
  
-    <main class="container">
-        <form class="form" action="">
-            <h1 class="form__heading">Contactez-moi</h1>
-            <div class="form__field">
-                <label for="contact-name">nom</label>
-                <input type="text" name="contact-name" id="contact-name" autocomplete="name">
-            </div>
-            <div class="form__field">
-                <label for="contact-email">email</label>
-                <input type="email" name="contact-email" id="contact-email" autocomplete="email">
-            </div>
-            <div class="form__field">
-                <label for="contact-message">message</label>
-                <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
-            </div>
-            <button class="btn btn--full-width">Valider</button>
-        </form>
-    </main>
+</br>
 
     <img src="images/desktop1.png" />
 
