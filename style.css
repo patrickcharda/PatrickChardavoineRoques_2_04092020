@@ -3,6 +3,7 @@
 }
 
 body {
+  justify-content: center;
   font-family: "Raleway", sans-serif;
 }
 
@@ -183,9 +184,18 @@ main .highlight2 {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  padding: 0;
 }
 .filtres input {
   border: none;
+}
+.filtres__label {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  padding: 0;
 }
 .filtres__inputpicto {
   margin-bottom: 15px;
@@ -226,6 +236,7 @@ main .highlight2 {
 }
 
 .message {
+  margin-top: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -251,28 +262,88 @@ main .highlight2 {
 .hebergement {
   margin-top: 15px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+  outline: 1px dashed green;
 }
 .hebergement__ville {
+  align-self: center;
+  flex: 1;
+  /* 1 1 auto */
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+.hebergement__ville__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  outline: 1px dashed red;
+  margin-right: 5px;
 }
-.hebergement__ville--photo1 {
-  width: 100px;
-  height: 100px;
+.hebergement__ville__container--photos1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  outline: 1px dashed black;
+}
+.hebergement__ville__container--photos1 .photo1 {
+  position: relative;
+  outline: 1px dotted grey;
+  width: 200px;
+  height: 300px;
+}
+.hebergement__ville__container--photos1 .photo1 > .img1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  border: 4px solid #ffffff;
 }
 .hebergement__populaire {
+  width: 25vw;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  outline: 1px dashed red;
+}
+.hebergement__populaire--photos2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  outline: 1px dashed black;
 }
-.hebergement__populaire--photo2 {
-  width: 100px;
-  height: 100px;
+.hebergement__populaire--photos2 .photo2 {
+  position: relative;
+  outline: 1px dotted grey;
+  width: 200px;
+  height: 200px;
+}
+.hebergement__populaire--photos2 .photo2 > .img2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  border: 4px solid #ffffff;
+}
+.hebergement__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.afficherplus {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
