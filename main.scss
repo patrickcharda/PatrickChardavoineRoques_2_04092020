@@ -278,24 +278,24 @@ main {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    outline: 1px dashed green;
+    //outline: 1px dashed green;
     &__ville {
        align-self: center;
        flex: 1; /* 1 1 auto */
        background-color: $color-background;
        border-radius: 20px;
-       margin-right: 8px;
+       margin-right: 20px;
         &__container {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            outline: 1px dashed red;
+            //outline: 1px dashed red;
             margin-right: 5px;
             &--photos1 {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                outline: 1px dashed black;
+                //outline: 1px dashed black;
                 & .annonce1 {
                     display: flex;
                     flex-direction: column;
@@ -305,7 +305,7 @@ main {
                     border: 1px solid #ffffff;
                     &__photo1 {
                         position: relative;
-                        outline: 1px dotted grey;
+                        //outline: 1px dotted grey;
                         width: 300px;
                         height: 150px;
                         & > .img1 {
@@ -338,29 +338,42 @@ main {
         width: 25vw;
         background-color: $color-background;
         border-radius: 20px;
-        outline: 1px dashed red;
+        //outline: 1px dashed red;
         &--photos2 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            outline: 1px dashed black;
-            & .photo2 {
-                position: relative;
-                outline: 1px dotted grey;
-                width: 300px;
-                height: 200px;
-                & > .img2 {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background-image: URL("./images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    border-radius: 15px;
-                    border: 4px solid #ffffff;
+            //outline: 1px dashed black;
+            & .annonce2 {
+                display: flex;
+                justify-content: flex-start;
+                background-color: #ffffff;
+                border-radius: 15px;
+                border: 1px solid #ffffff;
+                &__photo2 {
+                    position: relative;
+                    //outline: 1px dotted grey;
+                    width: 120px;
+                    height: 200px;
+                    & > .img2 {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-image: URL("./images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        border: 4px solid #ffffff;
+                    }
                 }
+                &__details {
+                    display: flex;
+                    flex-direction : column;
+                    justify-content: space-around;
+                } 
             }
         }
     }
