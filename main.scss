@@ -280,21 +280,24 @@ main {
     align-items: stretch;
     //outline: 1px dashed green;
     &__ville {
-       align-self: center;
+       //align-self: center;
        flex: 1; /* 1 1 auto */
        background-color: $color-background;
        border-radius: 20px;
-       margin-right: 20px;
+       margin-right: 20px; /*espace avec aside "les plus populaires"*/
         &__container {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 15px;
             //outline: 1px dashed red;
-            margin-right: 5px;
+            //margin-right: 10px;
             &--photos1 {
                 display: flex;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
+                margin-left: 10px;
                 //outline: 1px dashed black;
                 & .annonce1 {
                     display: flex;
@@ -303,6 +306,8 @@ main {
                     background-color: #ffffff;
                     border-radius: 15px;
                     border: 1px solid #ffffff;
+                    margin: 0 15px 15px 0;
+
                     &__photo1 {
                         position: relative;
                         //outline: 1px dotted grey;
@@ -322,10 +327,10 @@ main {
                         }
                     }
                     &__nom {
-                        height: 50px;
+                        height: 25px;
                     }
                     &__prix {
-                        height: 50px;
+                        height: 25px;
                     }
                     &__stars {
                         height: 50px;
@@ -335,7 +340,7 @@ main {
         }
     }
     &__populaire {
-        width: 25vw;
+        width: 30vw;
         background-color: $color-background;
         border-radius: 20px;
         //outline: 1px dashed red;
@@ -355,7 +360,7 @@ main {
                     position: relative;
                     //outline: 1px dotted grey;
                     width: 120px;
-                    height: 200px;
+                    height: 150px;
                     & > .img2 {
                         position: absolute;
                         width: 100%;
@@ -373,19 +378,29 @@ main {
                     display: flex;
                     flex-direction : column;
                     justify-content: space-around;
+                }
+                &__heading {
+                    background-color: $color-background;
+                    width: 120px;
+                    border: 3px solid $color-background;
                 } 
             }
         }
     }
     &__heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
+    &__footing {
+        margin-bottom : 15px;
+    }
+
+
 }
 .afficherplus {
     text-decoration: none;
     font-weight: 600;
     color: black;
+}
+.h2 {
+    display: inline-flex;
 }
  
