@@ -15,7 +15,7 @@ $color-unactiveborder: #F2F2F2;
 $color-activeborder: #0065FC;
 $color-secondary: #DEEBFF;
 $color-background: #F2F2F2;
-$breakpoints: ("mobile":"576px");
+$breakpoints: ("mobile":"600px");
 
 /*smartphone*/
 @mixin mobile-only {
@@ -24,51 +24,110 @@ $breakpoints: ("mobile":"576px");
     }
 }
 
-//
-.header {
+.header__nav {
     display: flex;
     justify-content: space-between;
-    margin-right: 2%;
-    &:nth-child(1) {
-        flex-basis: 75%;
-        flex-shrink: 1;
-        text-align: left;
-        position: relative;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    & a.nav__link {
+        //display: inline-block;
+        //width: 150px;
+        padding: 15px; 
+        font-weight: 600;
+        color: $color-unactivelink;
+        border-top: 3px solid $color-unactiveborder;
+        text-decoration: none;
+        &:hover {
+            border-top: 3px solid $color-activeborder;
+        }  
+        &:focus {
+            color: $color-activelink;
+            border-top: 3px solid $color-activeborder;
+        }
+        &--static {
+            text-decoration: none;
+            border-top: 3px solid white;
+            color: $color-primary;
+            font-weight: bold;
+        }
     }
-    & #reservialogo {
-        display: inline-block;
-        width: 120px;
-        height: 40px;
-        background-size: contain;
-        position: absolute;
-	    top: 2%;
-	    left: 2%;
-	    background-image: URL("./logos/Reservia3x.png");
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: contain;
+    &__logo {
+        flex-basis: 100%; //on force la gestion d'un espace négatif pour resserrer au maximum les liens de menu à droite 
     }
-    & #reservialogosvg {
-        display: inline-block;
-        width: 120px;
-        height: 40px;
-        position: absolute;
-	    top: 2%;
-        left: 2%;
-        padding-top: 20px;
+    &__inscription {
+        text-align: right;
+        padding-left: 20px;
+    }
+    &__hebergements {
+        //flex-basis: 50%;
+        text-align: right;
+    }
+    &__activites {
+        text-align: right;
     }
     @include mobile-only {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        & a.nav__link {
+            display: inline-block;
+            width: 165px;
+            padding: 15px; 
+            font-weight: 600;
+            color: $color-unactivelink;
+            border-top: 3px solid white;
+            border-bottom: 3px solid $color-unactiveborder;
+            text-decoration: none;
+            &:hover {
+                border-top: 3px solid white;
+                border-bottom: 3px solid $color-activeborder;
+            }  
+            &:focus {
+                border-top: none;
+                color: $color-activelink;
+                border-bottom: 3px solid $color-activeborder;
+            }
+            &--static {
+                text-decoration: none;
+                border-top: 3px solid white;
+                color: $color-primary;
+                font-weight: bold;
+            }
+        }
+        &__logo {
+            flex-basis: 50%;
+            order: 1;
+            //align-self: flex-start;
+            padding-bottom: 10px;
+        }
+        &__inscription {
+            padding-top: 14px;
+            text-align: right;
+            align-self: flex-start;
+            order: 2;
+            flex-basis: 50%;
+        }
+        &__hebergements {
+            flex-basis: 50%;
+            flex-grow: 1;
+            text-align: center;
+            order: 3;
+        }
+        &__activites {
+            text-align: center;
+            order: 4;
+            flex-basis: 50%;
+        }
     }
 }
-
 .nav {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     &__link {
-        display: inline-block;
+        //display: inline-block;
         padding: 30px; 
         font-weight: 600;
         color: $color-unactivelink;
@@ -85,12 +144,14 @@ $breakpoints: ("mobile":"576px");
     & a:nth-child(3) {
         color: $color-primary;
         font-weight: bold;
-        border: none;
+        border-top: 3px solid white;
         &:focus {
-            border: none;
+            border-top: 3px solid white;
         }
     }
     @include mobile-only {
+        justify-content: space-between;
+        align-self: flex-end;
         flex-wrap: wrap;
         & > a {
             width: 50%;
@@ -109,14 +170,17 @@ $breakpoints: ("mobile":"576px");
             }
         }
         & a:nth-child(3) {
-            order: -2;
-            width: 100%;
-            border: none;
-            color: $color-primary;
-            text-align: right;
+            //margin-left: auto;
+            //order: -2;
+            //width: 51%;
+            //border-top: 3px solid white;
+            //border-bottom: 3px solid white;
+            //color: $color-primary;
+            //text-align: right;
             &:focus {
-                border-top: none;
-                border-bottom: none;
+                //border-top: 3px solid white;
+                //border-top: none;
+                //border-bottom: none;
             }
         }
     } 
@@ -347,15 +411,23 @@ main {
         &--photos2 {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: center; 
             //outline: 1px dashed black;
             & .annonce2 {
                 display: flex;
                 justify-content: flex-start;
-                background-color: #ffffff;
+                background-color: $color-background;
                 border-radius: 15px;
-                border: 1px solid #ffffff;
+                //border: 4px solid #ffffff;
+                margin-bottom: 25px;
+                width: 400px;
+                :nth-child(1) {
+                    background-color: $color-background;
+                    border-radius: 0px;
+                    border: none;
+                    align-self: center;
+                }
                 &__photo2 {
                     position: relative;
                     //outline: 1px dotted grey;
@@ -379,15 +451,8 @@ main {
                     flex-direction : column;
                     justify-content: space-around;
                 }
-                &__heading {
-                    background-color: $color-background;
-                    width: 120px;
-                    border: 3px solid $color-background;
-                } 
             }
         }
-    }
-    &__heading {
     }
     &__footing {
         margin-bottom : 15px;
@@ -401,6 +466,6 @@ main {
     color: black;
 }
 .h2 {
-    display: inline-flex;
+    display: inline-block;
 }
  

@@ -8,53 +8,109 @@ body {
 }
 
 /*smartphone*/
-.header {
+.header__nav {
   display: flex;
   justify-content: space-between;
-  margin-right: 2%;
-}
-.header:nth-child(1) {
-  flex-basis: 75%;
-  flex-shrink: 1;
-  text-align: left;
-  position: relative;
-}
-.header #reservialogo {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  background-size: contain;
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  background-image: URL("./logos/Reservia3x.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.header #reservialogosvg {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  position: absolute;
-  top: 2%;
-  left: 2%;
+  align-items: center;
   padding-top: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
-@media only screen and (max-width: 576px) {
-  .header {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+.header__nav a.nav__link {
+  padding: 15px;
+  font-weight: 600;
+  color: #727272;
+  border-top: 3px solid #F2F2F2;
+  text-decoration: none;
+}
+.header__nav a.nav__link:hover {
+  border-top: 3px solid #0065FC;
+}
+.header__nav a.nav__link:focus {
+  color: #237AFC;
+  border-top: 3px solid #0065FC;
+}
+.header__nav a.nav__link--static {
+  text-decoration: none;
+  border-top: 3px solid white;
+  color: #0065FC;
+  font-weight: bold;
+}
+.header__nav__logo {
+  flex-basis: 100%;
+}
+.header__nav__inscription {
+  text-align: right;
+  padding-left: 20px;
+}
+.header__nav__hebergements {
+  text-align: right;
+}
+.header__nav__activites {
+  text-align: right;
+}
+@media only screen and (max-width: 600px) {
+  .header__nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+  .header__nav a.nav__link {
+    display: inline-block;
+    width: 165px;
+    padding: 15px;
+    font-weight: 600;
+    color: #727272;
+    border-top: 3px solid white;
+    border-bottom: 3px solid #F2F2F2;
+    text-decoration: none;
+  }
+  .header__nav a.nav__link:hover {
+    border-top: 3px solid white;
+    border-bottom: 3px solid #0065FC;
+  }
+  .header__nav a.nav__link:focus {
+    border-top: none;
+    color: #237AFC;
+    border-bottom: 3px solid #0065FC;
+  }
+  .header__nav a.nav__link--static {
+    text-decoration: none;
+    border-top: 3px solid white;
+    color: #0065FC;
+    font-weight: bold;
+  }
+  .header__nav__logo {
+    flex-basis: 50%;
+    order: 1;
+    padding-bottom: 10px;
+  }
+  .header__nav__inscription {
+    padding-top: 14px;
+    text-align: right;
+    align-self: flex-start;
+    order: 2;
+    flex-basis: 50%;
+  }
+  .header__nav__hebergements {
+    flex-basis: 50%;
+    flex-grow: 1;
+    text-align: center;
+    order: 3;
+  }
+  .header__nav__activites {
+    text-align: center;
+    order: 4;
+    flex-basis: 50%;
   }
 }
 
 .nav {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 .nav__link {
-  display: inline-block;
   padding: 30px;
   font-weight: 600;
   color: #727272;
@@ -71,13 +127,15 @@ body {
 .nav a:nth-child(3) {
   color: #0065FC;
   font-weight: bold;
-  border: none;
+  border-top: 3px solid white;
 }
 .nav a:nth-child(3):focus {
-  border: none;
+  border-top: 3px solid white;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
   .nav {
+    justify-content: space-between;
+    align-self: flex-end;
     flex-wrap: wrap;
   }
   .nav > a {
@@ -95,17 +153,6 @@ body {
   .nav > a:hover {
     border-bottom: 3px solid #0065FC;
     border-top: none;
-  }
-  .nav a:nth-child(3) {
-    order: -2;
-    width: 100%;
-    border: none;
-    color: #0065FC;
-    text-align: right;
-  }
-  .nav a:nth-child(3):focus {
-    border-top: none;
-    border-bottom: none;
   }
 }
 
@@ -329,15 +376,22 @@ main .highlight2 {
 .hebergement__populaire--photos2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .hebergement__populaire--photos2 .annonce2 {
   display: flex;
   justify-content: flex-start;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   border-radius: 15px;
-  border: 1px solid #ffffff;
+  margin-bottom: 25px;
+  width: 400px;
+}
+.hebergement__populaire--photos2 .annonce2 :nth-child(1) {
+  background-color: #F2F2F2;
+  border-radius: 0px;
+  border: none;
+  align-self: center;
 }
 .hebergement__populaire--photos2 .annonce2__photo2 {
   position: relative;
@@ -361,11 +415,6 @@ main .highlight2 {
   flex-direction: column;
   justify-content: space-around;
 }
-.hebergement__populaire--photos2 .annonce2__heading {
-  background-color: #F2F2F2;
-  width: 120px;
-  border: 3px solid #F2F2F2;
-}
 .hebergement__footing {
   margin-bottom: 15px;
 }
@@ -377,7 +426,7 @@ main .highlight2 {
 }
 
 .h2 {
-  display: inline-flex;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */
