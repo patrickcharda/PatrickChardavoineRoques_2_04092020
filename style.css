@@ -174,15 +174,13 @@ main .highlight2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 55px;
+  height: 50px;
   margin-top: 23px;
   margin-bottom: 25px;
 }
 .searchbar__picto {
-  height: 55px;
+  height: 50px;
   padding: 14px;
-  padding-right: 24px;
-  padding-left: 24px;
   margin: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -194,12 +192,16 @@ main .highlight2 {
   padding: 0;
 }
 .searchbar__input {
-  height: 55px;
-  padding: 15px;
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   border: 2px solid #F2F2F2;
   border-right: none;
   text-align: left;
+  width: 170px;
 }
 .searchbar__input--border {
   border: none;
@@ -208,8 +210,11 @@ main .highlight2 {
   font-weight: bold;
 }
 .searchbar__submit {
-  height: 55px;
-  padding: 15px;
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   border: 2px solid #0065FC;
   border-top-right-radius: 15px;
@@ -270,16 +275,29 @@ main .highlight2 {
   border: 3px solid #DEEBFF;
 }
 .filtres__inputpicto--right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   border: none;
-  padding: 0;
-  padding-left: 5px;
 }
-.filtres__inputpicto--insideinput {
+.filtres__inputpicto--insideinput--eco {
   padding: 0;
   text-align: center;
+  width: 130px;
+}
+.filtres__inputpicto--insideinput--fam {
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  width: 100px;
+}
+.filtres__inputpicto--insideinput--ani {
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.filtres__inputpicto--insideinput--rom {
+  padding: 0;
+  text-align: center;
+  width: 130px;
 }
 
 .message {
