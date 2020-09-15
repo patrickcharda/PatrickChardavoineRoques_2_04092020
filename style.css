@@ -324,34 +324,36 @@ main .highlight2 {
   background-color: #ffffff;
 }
 
-.hebergement {
+.hebergement__container {
   margin-top: 15px;
+  margin-left: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
 }
-.hebergement__ville {
-  flex: 1;
-  /* 1 1 auto */
+.hebergement__container--item__ville {
+  flex-basis: 40%;
+  flex-grow: 0;
+  order: 1;
   background-color: #F2F2F2;
   border-radius: 20px;
-  margin-right: 20px;
+  margin-right: 15px;
   /*espace avec aside "les plus populaires"*/
 }
-.hebergement__ville__container {
+.hebergement__container--item__ville .annonces__container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   margin-left: 15px;
 }
-.hebergement__ville__container--photos1 {
+.hebergement__container--item__ville .annonces__container--item .photos1__container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
 }
-.hebergement__ville__container--photos1 .annonce1 {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -360,12 +362,12 @@ main .highlight2 {
   border: 1px solid #ffffff;
   margin: 0 15px 15px 0;
 }
-.hebergement__ville__container--photos1 .annonce1__photo1 {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
   position: relative;
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 75px;
 }
-.hebergement__ville__container--photos1 .annonce1__photo1 > .img1 {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 > .img1 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -377,7 +379,7 @@ main .highlight2 {
   border-top-left-radius: 15px;
   border: 4px solid #ffffff;
 }
-.hebergement__ville__container--photos1 .annonce1__nom {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
   height: 35px;
   padding-left: 9px;
   padding-top: 7px;
@@ -385,23 +387,23 @@ main .highlight2 {
   font-size: 1.1em;
   font-weight: 700;
 }
-.hebergement__ville__container--photos1 .annonce1__prix {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
   height: 25px;
   padding-left: 9px;
   font-size: 0.8em;
 }
-.hebergement__ville__container--photos1 .annonce1__stars {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
   height: 50px;
   padding-left: 9px;
 }
-.hebergement__ville__container--photos1 .annonce1__stars .bluestar {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .bluestar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__ville__container--photos1 .annonce1__stars .bluestar--blueimg {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .bluestar--blueimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -410,14 +412,14 @@ main .highlight2 {
   background-position: center;
   background-size: cover;
 }
-.hebergement__ville__container--photos1 .annonce1__stars .greystar {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .greystar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__ville__container--photos1 .annonce1__stars .greystar--greyimg {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .greystar--greyimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -426,34 +428,26 @@ main .highlight2 {
   background-position: center;
   background-size: cover;
 }
-.hebergement__populaire {
-  width: 30vw;
+.hebergement__container--item__populaire {
+  flex-basis: 30%;
   background-color: #F2F2F2;
   border-radius: 20px;
+  margin-left: 10px;
+  order: 2;
 }
-.hebergement__populaire--photos2 {
+.hebergement__container--item__populaire .annonces__container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 20px;
-  padding-right: 20px;
 }
-.hebergement__populaire--photos2 .annonce2 {
+.hebergement__container--item__populaire .annonces__container .annonce2__container {
   display: flex;
-  background-color: white;
-  border-radius: 15px;
-  margin-bottom: 25px;
-  width: 400px;
 }
-.hebergement__populaire--photos2 .annonce2 titre {
-  background-color: #F2F2F2;
-}
-.hebergement__populaire--photos2 .annonce2__photo2 {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
   position: relative;
-  width: 120px;
-  height: 150px;
+  width: 90px;
+  height: 120px;
 }
-.hebergement__populaire--photos2 .annonce2__photo2 > .img2 {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > .img2 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -465,41 +459,41 @@ main .highlight2 {
   border-bottom-left-radius: 15px;
   border: 4px solid #ffffff;
 }
-.hebergement__populaire--photos2 .annonce2__details {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   font-weight: bold;
 }
-.hebergement__populaire--photos2 .annonce2__details--nom {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
   padding-top: 7px;
   padding-left: 7px;
   flex-basis: 20%;
   font-weight: 700;
   font-size: 1.1em;
 }
-.hebergement__populaire--photos2 .annonce2__details--prix {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
   padding-top: 7px;
   padding-left: 7px;
   flex-basis: 60%;
   font-size: 0.8em;
   font-weight: normal;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
   flex-basis: 20%;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars--stars {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars {
   height: 50px;
   padding-left: 7px;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars--stars .bluestar {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars .bluestar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars--stars .bluestar--blueimg {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars .bluestar--blueimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -508,14 +502,14 @@ main .highlight2 {
   background-position: center;
   background-size: cover;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars--stars .greystar {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars .greystar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__populaire--photos2 .annonce2__details--stars--stars .greystar--greyimg {
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars .greystar--greyimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -523,12 +517,6 @@ main .highlight2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.hebergement__populaire--photos2__titre {
-  background-color: #F2F2F2;
-}
-.hebergement__footing {
-  margin-bottom: 15px;
 }
 
 .afficherplus {

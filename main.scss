@@ -15,7 +15,7 @@ $color-unactiveborder: #F2F2F2;
 $color-activeborder: #0065FC;
 $color-secondary: #DEEBFF;
 $color-background: #F2F2F2;
-$breakpoints: ("mobile":"600px");
+$breakpoints: ("mobile":"600px","tablette":"800px");
 
 /*smartphone*/
 @mixin mobile-only {
@@ -167,20 +167,6 @@ $breakpoints: ("mobile":"600px");
             &:hover {
                 border-bottom: 3px solid $color-primary;
                 border-top: none;
-            }
-        }
-        & a:nth-child(3) {
-            //margin-left: auto;
-            //order: -2;
-            //width: 51%;
-            //border-top: 3px solid white;
-            //border-bottom: 3px solid white;
-            //color: $color-primary;
-            //text-align: right;
-            &:focus {
-                //border-top: 3px solid white;
-                //border-top: none;
-                //border-bottom: none;
             }
         }
     } 
@@ -362,32 +348,31 @@ main {
         }
     }    
 }
-.hebergement {
+
+.hebergement__container {
     margin-top: 15px;
+    margin-left: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
-    //outline: 1px dashed green;
-    &__ville {
-       //align-self: center;
-       flex: 1; /* 1 1 auto */
-       background-color: $color-background;
-       border-radius: 20px;
-       margin-right: 20px; /*espace avec aside "les plus populaires"*/
-        &__container {
+    &--item__ville {
+        flex-basis: 40%;
+        flex-grow: 0;
+        order: 1;
+        background-color: $color-background;
+        border-radius: 20px;
+        margin-right: 15px; /*espace avec aside "les plus populaires"*/
+        & .annonces__container {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: flex-start;
             margin-left: 15px;
-            //outline: 1px dashed red;
-            //margin-right: 10px;
-            &--photos1 {
+            &--item .photos1__container {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 margin-left: 10px;
-                //outline: 1px dashed black;
                 & .annonce1 {
                     display: flex;
                     flex-direction: column;
@@ -396,12 +381,11 @@ main {
                     border-radius: 15px;
                     border: 1px solid #ffffff;
                     margin: 0 15px 15px 0;
-
                     &__photo1 {
                         position: relative;
                         //outline: 1px dotted grey;
-                        width: 300px;
-                        height: 150px;
+                        width: 150px;
+                        height: 75px;
                         & > .img1 {
                             position: absolute;
                             width: 100%;
@@ -468,37 +452,23 @@ main {
             }
         }
     }
-    &__populaire {
-        width: 30vw;
+    &--item__populaire {
+        flex-basis: 30%;
         background-color: $color-background;
         border-radius: 20px;
-        //outline: 1px dashed red;
-        &--photos2 {
+        margin-left: 10px;
+        order: 2;
+        & .annonces__container {
             display: flex;
+            //background-color: $color-background;
             flex-direction: column;
-            justify-content: flex-start;
-            padding-left: 20px;
-            padding-right: 20px;
-            //align-items: center;
-            //background-color: #ffffff; 
-            //outline: 1px dashed black;
-            & .annonce2 {
+            & .annonce2__container {
                 display: flex;
-                //justify-content: flex-start;
-                //align-items: center;
-                background-color: white;
-                border-radius: 15px;
-                //border: 4px solid #ffffff;
-                margin-bottom: 25px;
-                width: 400px;
-                & titre {
-                    background-color: $color-background;
-                }
-                &__photo2 {
+                & .annonce2__photo2 {
                     position: relative;
                     //outline: 1px dotted grey;
-                    width: 120px;
-                    height: 150px;
+                    width: 90px;
+                    height: 120px;
                     & > .img2 {
                         position: absolute;
                         width: 100%;
@@ -512,7 +482,7 @@ main {
                         border: 4px solid #ffffff;
                     }
                 }
-                &__details {
+                & .annonce2__details {
                     display: flex;
                     flex-direction : column;
                     justify-content: flex-end;
@@ -576,19 +546,8 @@ main {
                     }
                 }
             }
-            &__titre {
-                background-color: $color-background;
-                //border-radius: 0px;
-                //border: 1px solid red;
-                //align-self: center;
-            }
         }
     }
-    &__footing {
-        margin-bottom : 15px;
-    }
-
-
 }
 .afficherplus {
     text-decoration: none;
