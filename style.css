@@ -78,7 +78,7 @@ main #img5 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: URL("./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+  background-image: URL("./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -90,7 +90,7 @@ main #img6 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: URL("./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+  background-image: URL("./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -102,6 +102,18 @@ main #img7 {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 4px solid #ffffff;
+}
+main #img8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-image: URL("./images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -110,7 +122,7 @@ main #img7 {
   border-bottom-left-radius: 15px;
   border: 4px solid #ffffff;
 }
-main #img8 {
+main #img9 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -122,7 +134,7 @@ main #img8 {
   border-bottom-left-radius: 15px;
   border: 4px solid #ffffff;
 }
-main #img9 {
+main #img10 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -450,6 +462,7 @@ main #img9 {
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container {
+    justify-content: stretch;
     flex-wrap: wrap-reverse;
   }
 }
@@ -463,14 +476,15 @@ main #img9 {
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville {
-    flex-basis: 60%;
     height: 1000px;
+    max-width: 650px;
   }
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville {
+    height: 1100px;
+    max-width: none;
     flex-basis: 100%;
-    height: 1700px;
   }
 }
 .hebergement__container--item__ville .annonces__container {
@@ -495,7 +509,10 @@ main #img9 {
   }
 }
 @media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction1, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction2, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction3, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction4, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction5, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction6 {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container {
+    flex-wrap: wrap;
+  }
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction1, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction.bis, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction1.ter, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction2, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction3, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction4, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction5, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction6 {
     flex-basis: 100%;
   }
 }
@@ -507,6 +524,22 @@ main #img9 {
   border-radius: 15px;
   border: 1px solid #ffffff;
   margin: 0 15px 25px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
+    align-items: center;
+    background-color: white;
+    border: 0;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
+    background-color: white;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
   position: relative;
@@ -565,7 +598,7 @@ main #img9 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: URL("./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+  background-image: URL("./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -577,6 +610,18 @@ main #img9 {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 4px solid #ffffff;
+}
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-image: URL("./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -584,6 +629,23 @@ main #img9 {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   border: 4px solid #ffffff;
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
+    flex-shrink: 0;
+  }
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
+    max-width: 300px;
+    flex-shrink: 1;
+  }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
   height: 35px;
@@ -593,14 +655,35 @@ main #img9 {
   font-size: 1.1em;
   font-weight: 700;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
+    position: absolute;
+    left: 320px;
+    top: 15px;
+  }
+}
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
   height: 25px;
   padding-left: 9px;
   font-size: 0.8em;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
+    position: absolute;
+    left: 320px;
+    top: 50px;
+  }
+}
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
   height: 50px;
   padding-left: 9px;
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
+    position: absolute;
+    left: 320px;
+    top: 70px;
+  }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .bluestar {
   display: inline-block;
@@ -667,6 +750,11 @@ main #img9 {
   align-items: center;
   justify-content: flex-start;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container {
+    align-items: stretch;
+  }
+}
 .hebergement__container--item__populaire .annonces__container .annonce2__container {
   display: flex;
   background-color: white;
@@ -677,6 +765,13 @@ main #img9 {
   width: 140px;
   max-width: 140px;
   height: 140px;
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
+    width: 300px;
+    max-width: 300px;
+    height: 140px;
+  }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details {
   display: flex;
@@ -693,6 +788,11 @@ main #img9 {
   font-weight: 700;
   font-size: 1.1em;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
+    padding-left: 29px;
+  }
+}
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
   padding-top: 7px;
   padding-left: 7px;
@@ -700,8 +800,18 @@ main #img9 {
   font-size: 0.8em;
   font-weight: normal;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
+    padding-left: 29px;
+  }
+}
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
   flex-basis: 20%;
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
+    padding-left: 27px;
+  }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars {
   height: 50px;
@@ -744,28 +854,57 @@ main #img9 {
   flex-basis: 10%;
   align-self: flex-start;
 }
+@media only screen and (max-width: 920px) {
+  .head {
+    padding-left: 25px;
+  }
+}
 
 #elem1, #elem2, #elem3 {
   flex-basis: 30%;
 }
 
-.item--fraction1.bis {
+@media only screen and (max-width: 920px) {
+  .item--fraction1, .item--fraction2, .item--fraction3 {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .item--fraction6, .item--fraction7 {
+    flex-basis: 100%;
+  }
+}
+
+.item--fraction4 {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
 @media only screen and (max-width: 1200px) {
-  .item--fraction1.bis {
+  .item--fraction4 {
     position: relative;
   }
 }
+@media only screen and (max-width: 920px) {
+  .item--fraction4 {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+}
 
-.item--fraction1.ter {
+.item--fraction5 {
   position: relative;
 }
 @media only screen and (max-width: 1200px) {
-  .item--fraction1.ter {
+  .item--fraction5 {
     position: absolute;
     clip: rect(0, 0, 0, 0);
+  }
+}
+@media only screen and (max-width: 920px) {
+  .item--fraction5 {
+    position: relative;
+    flex-basis: 100%;
   }
 }
 

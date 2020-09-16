@@ -16,17 +16,18 @@ $color-unactiveborder: #F2F2F2;
 $color-activeborder: #0065FC;
 $color-secondary: #DEEBFF;
 $color-background: #F2F2F2;
-$breakpoints: ("mobile":"576px", "large":"1200px", "middle":"920px");
+$breakpoints: ("mobile":"576px","middle":"920px","large":"1200px");
 $photos__ville: ("#img1":"./images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg",
 "#img2":"./images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg",
 "#img3":"./images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg",
 "#img4":"./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img5":"./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
-"#img6":"./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+"#img5":"./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
+"#img6":"./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
+"#img7":"./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
 );
-$photos__populaires: ("#img7":"./images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg",
-"#img8":"./images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg",
-"#img9":"./images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+$photos__populaires: ("#img8":"./images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg",
+"#img9":"./images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg",
+"#img10":"./images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
 );
 
 /*smartphone*/
@@ -423,7 +424,9 @@ main {
     justify-content: flex-start;
     align-items: stretch;
     @include middle {
+        justify-content: stretch;
         flex-wrap: wrap-reverse;
+
     }
     &--item__ville {
         flex-basis: 70%;
@@ -433,12 +436,14 @@ main {
         background-color: $color-background;
         border-radius: 20px;
         @include large {
-            flex-basis: 60%;
+            //flex-basis: 60%;
             height: 1000px;
+            max-width: 650px;
         }
         @include middle {
+            height: 1100px;
+            max-width: none;
             flex-basis: 100%;
-            height: 1700px;
         }
         & .annonces__container {
             display: flex;
@@ -458,10 +463,12 @@ main {
                     flex-wrap: wrap;
                 }
                 @include middle {
-                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6{
+                    flex-wrap: wrap;
+                    & .item--fraction1, .item--fraction.bis, .item--fraction1.ter, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
                         flex-basis: 100%;
                     }
                 }
+                
                 & .annonce1 {
                     display: flex;
                     flex-direction: column;
@@ -470,11 +477,36 @@ main {
                     border-radius: 15px;
                     border: 1px solid #ffffff;
                     margin: 0 15px 25px 0;
+                    @include large {
+                        align-items: center;
+                        background-color: white;
+                        border: 0;
+                    }
+                    @include middle {
+                        background-color: white;
+                        position: relative;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
                     &__photo1 {
                         position: relative;
                         width: 225px;
                         height: 120px;
                         @include photos($photos__ville);
+                        @include middle {  
+                            flex-shrink: 0;
+                            & #img1,#img2,#img3,#img4,#img5,#img6,#img7 {
+                                border-top-left-radius: 15px;
+                                border-top-right-radius: 0;
+                                border-bottom-left-radius: 15px;
+                                width: 300px;
+                            }
+                        }
+                        @include large {
+                            max-width: 300px;
+                            flex-shrink: 1;
+                        }
                     }
                     &__nom {
                         height: 35px;
@@ -483,15 +515,30 @@ main {
                         padding-bottom: 5px;
                         font-size: 1.1em;
                         font-weight: 700;
+                        @include middle {
+                            position: absolute;
+                            left: 320px;
+                            top: 15px;
+                        }
                     }
                     &__prix {
                         height: 25px;
                         padding-left: 9px;
                         font-size: .8em;
+                        @include middle {
+                            position: absolute;
+                            left: 320px;
+                            top: 50px;
+                        }
                     }
                     &__stars {
                         height: 50px;
                         padding-left: 9px;
+                        @include middle {
+                            position: absolute;
+                            left: 320px;
+                            top: 70px;
+                        }
                         & .bluestar {
                             display: inline-block;
                             position: relative;
@@ -556,6 +603,9 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+            @include middle {
+                align-items: stretch;
+            }
             & .annonce2__container {
                 display: flex;
                 background-color: white;
@@ -565,6 +615,11 @@ main {
                     width: 140px;
                     max-width: 140px;
                     height: 140px;
+                    @include middle {
+                        width: 300px;
+                        max-width: 300px;
+                        height: 140px;
+                    }
                 }
                 & .annonce2__details {
                     display: flex;
@@ -579,6 +634,9 @@ main {
                         flex-basis: 20%;
                         font-weight: 700;
                         font-size: 1.1em;
+                        @include middle {
+                            padding-left: 29px;
+                        }
                     }
                     &--prix {
                         padding-top: 7px;
@@ -586,9 +644,15 @@ main {
                         flex-basis: 60%;
                         font-size: .8em;
                         font-weight: normal;
+                        @include middle {
+                            padding-left: 29px;
+                        }
                     }
                     &--stars {
                         flex-basis: 20%;
+                        @include middle {
+                            padding-left: 27px;
+                        }
                         &--stars {
                             height: 50px;
                             padding-left: 7px;
@@ -635,26 +699,57 @@ main {
 .head {
     flex-basis: 10%;
     align-self: flex-start;
+    @include middle {
+        padding-left: 25px;
+    }
 }
 #elem1, #elem2, #elem3 {
     flex-basis: 30%;
 }
 
-.item--fraction1.bis {
+.item--fraction1, .item--fraction2, .item--fraction3 {
+    @include large {
+        //flex-basis: 50%;
+    }
+    @include middle {
+        flex-basis: 100%;
+    }
+}
+.item--fraction6, .item--fraction7 {
+    @include large {
+        //flex-basis: 50%;
+    }
+    @include middle {
+        flex-basis: 100%;
+    }
+}
+
+.item--fraction4 {
     position: absolute;
     clip: rect(0,0,0,0);
     @include large {
         position: relative;
+        //flex-basis: 50%;
+    }
+    @include middle {
+        position: absolute;
+        clip: rect(0,0,0,0);   
     }
 }
 
-.item--fraction1.ter {
+.item--fraction5 {
     position: relative;
     @include large {
         position: absolute;
         clip: rect(0,0,0,0);   
     }
+    @include middle {
+        position: relative;
+        flex-basis: 100%;
+    }
 }
+
+
 
 .afficherplus {
     text-decoration: none;
@@ -665,4 +760,3 @@ main {
 .h2 {
     display: inline-block;
 }
-
