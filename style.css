@@ -110,6 +110,18 @@ main #img7 {
   border-top-left-radius: 15px;
   border: 4px solid #ffffff;
 }
+main #img11 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 4px solid #ffffff;
+}
 main #img8 {
   position: absolute;
   width: 100%;
@@ -510,7 +522,6 @@ main #img10 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
 }
 .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
   align-self: flex-start;
@@ -669,6 +680,18 @@ main #img10 {
   border-top-left-radius: 15px;
   border: 4px solid #ffffff;
 }
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img11 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: URL("./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 4px solid #ffffff;
+}
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
     flex-shrink: 1;
@@ -678,7 +701,7 @@ main #img10 {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
     flex-shrink: 0;
   }
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7 {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img11 {
     border-top-left-radius: 15px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 15px;
@@ -692,7 +715,7 @@ main #img10 {
     flex-shrink: 1;
     flex-grow: 1;
   }
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7 {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img11 {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 0;
