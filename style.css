@@ -180,8 +180,13 @@ main #img10 {
 }
 .header__nav a.nav__link:hover {
   border-top: 3px solid #0065FC;
+  color: #237AFC;
 }
 .header__nav a.nav__link:focus {
+  color: #237AFC;
+  border-top: 3px solid #0065FC;
+}
+.header__nav a.nav__link:active {
   color: #237AFC;
   border-top: 3px solid #0065FC;
 }
@@ -225,6 +230,11 @@ main #img10 {
     border-bottom: 3px solid #0065FC;
   }
   .header__nav a.nav__link:focus {
+    border-top: none;
+    color: #237AFC;
+    border-bottom: 3px solid #0065FC;
+  }
+  .header__nav a.nav__link:active {
     border-top: none;
     color: #237AFC;
     border-bottom: 3px solid #0065FC;

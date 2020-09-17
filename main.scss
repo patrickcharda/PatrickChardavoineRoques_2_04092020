@@ -123,8 +123,13 @@ main {
         text-decoration: none;
         &:hover {
             border-top: 3px solid $color-activeborder;
+            color: $color-activelink;
         }  
         &:focus {
+            color: $color-activelink;
+            border-top: 3px solid $color-activeborder;
+        }
+        &:active {
             color: $color-activelink;
             border-top: 3px solid $color-activeborder;
         }
@@ -141,6 +146,7 @@ main {
     &__inscription {
         text-align: right;
         padding-left: 20px;
+        //border: 1px solid red;
     }
     &__hebergements {
         //flex-basis: 50%;
@@ -167,6 +173,11 @@ main {
                 border-bottom: 3px solid $color-activeborder;
             }  
             &:focus {
+                border-top: none;
+                color: $color-activelink;
+                border-bottom: 3px solid $color-activeborder;
+            }
+            &:active {
                 border-top: none;
                 color: $color-activelink;
                 border-bottom: 3px solid $color-activeborder;
