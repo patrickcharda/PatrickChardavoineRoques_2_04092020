@@ -192,7 +192,7 @@ main #img10 {
 .header__nav__activites {
   text-align: right;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .header__nav {
     justify-content: center;
     flex-wrap: wrap;
@@ -275,7 +275,7 @@ main #img10 {
 .nav a:nth-child(3):focus {
   border-top: 3px solid white;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .nav {
     justify-content: space-between;
     align-self: flex-end;
@@ -392,6 +392,35 @@ main #img10 {
   -webkit-border-radius: 25px;
   border-radius: 25px;
   -moz-border-radius: 25px;
+  /*
+  &--insideinput--eco {
+      padding-left: 5px;
+      padding-right: 5px;
+      //padding: 0;
+      //text-align: center;
+      //width: 130px;
+  }
+  &--insideinput--fam {
+      padding-left: 5px;
+      padding-right: 5px;
+      //padding: 0;
+      //text-align: center;
+      //width: 100%;
+  }
+  &--insideinput--ani {
+      padding-left: 5px;
+      padding-right: 5px;
+      //padding: 0;
+      //text-align: center;
+      //width: 100%;
+  }
+  &--insideinput--rom {
+      padding-left: 5px;
+      padding-right: 5px;
+      //padding: 0;
+      //text-align: center;
+      //width: 100%;
+  }*/
 }
 .filtres__inputpicto--left {
   display: flex;
@@ -407,26 +436,9 @@ main #img10 {
   display: inline-block;
   border: none;
 }
-.filtres__inputpicto--insideinput--eco {
-  padding: 0;
-  text-align: center;
-  width: 130px;
-}
-.filtres__inputpicto--insideinput--fam {
-  padding: 0;
-  text-align: center;
-  overflow: hidden;
-  width: 100px;
-}
-.filtres__inputpicto--insideinput--ani {
-  padding: 0;
-  text-align: center;
-  width: 100%;
-}
-.filtres__inputpicto--insideinput--rom {
-  padding: 0;
-  text-align: center;
-  width: 130px;
+.filtres__inputpicto--insideinput {
+  padding-left: 7px;
+  padding-right: 5px;
 }
 
 .message {
@@ -487,9 +499,9 @@ main #img10 {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville {
-    height: 1800px;
+    height: 1700px;
     max-width: none;
     flex-basis: 100%;
   }
@@ -524,7 +536,7 @@ main #img10 {
     }*/
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container {
     padding-right: 10px;
   }
@@ -554,7 +566,7 @@ main #img10 {
     align-items: center;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
     position: relative;
     flex-direction: row;
@@ -567,7 +579,7 @@ main #img10 {
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
   position: relative;
   width: 225px;
-  height: 120px;
+  height: 125px;
   /*@include large {
       max-width: 300px;
       flex-shrink: 1;
@@ -673,7 +685,7 @@ main #img10 {
     width: 300px;
   }
 }
-@media only screen and (max-width: 920px) and (max-width: 576px) {
+@media only screen and (max-width: 920px) and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
     display: flex;
     flex-basis: 100%;
@@ -705,12 +717,13 @@ main #img10 {
     top: 15px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
     flex-basis: 100%;
     position: relative;
     left: 0;
     top: 0;
+    font-size: smaller;
   }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
@@ -725,7 +738,7 @@ main #img10 {
     top: 50px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
     flex-basis: 100%;
     position: relative;
@@ -736,6 +749,7 @@ main #img10 {
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
   height: 50px;
   padding-left: 9px;
+  padding-top: 15px;
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
@@ -744,7 +758,7 @@ main #img10 {
     top: 70px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
     flex-basis: 100%;
     position: relative;
@@ -832,7 +846,7 @@ main #img10 {
     margin-left: 10px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container {
     margin-left: 10px;
   }
@@ -851,7 +865,7 @@ main #img10 {
     height: 140px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
     width: 200px;
     max-width: 300px;
@@ -873,7 +887,7 @@ main #img10 {
   align-content: flex-end;
   height: 140px;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details__container {
     height: 120px;
   }
@@ -890,7 +904,7 @@ main #img10 {
     padding-left: 29px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
     padding-left: 19px;
     font-size: smaller;
@@ -908,7 +922,7 @@ main #img10 {
     padding-left: 29px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
     padding-left: 19px;
     font-size: smaller;
@@ -922,7 +936,7 @@ main #img10 {
     padding-left: 27px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
     padding-left: 17px;
   }
@@ -930,6 +944,17 @@ main #img10 {
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars {
   height: 50px;
   padding-left: 7px;
+  padding-top: 13px;
+}
+@media only screen and (max-width: 620px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars {
+    padding-left: 0;
+  }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars--stars .bluestar {
   display: inline-block;
@@ -983,7 +1008,7 @@ main #img10 {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .item--fraction1, .item--fraction2, .item--fraction3 {
     flex-basis: 100%;
   }
@@ -994,7 +1019,7 @@ main #img10 {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .item--fraction6, .item--fraction7 {
     flex-basis: 100%;
   }
@@ -1015,7 +1040,7 @@ main #img10 {
     clip: rect(0, 0, 0, 0);
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .item--fraction4 {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -1037,7 +1062,7 @@ main #img10 {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .item--fraction5 {
     position: relative;
     flex-basis: 100%;
