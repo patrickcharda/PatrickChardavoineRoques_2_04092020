@@ -1152,19 +1152,28 @@ main #img17 {
 }
 
 /*section activites*/
-.activites__container {
+.activites {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.activites--titre {
+  margin-left: 20px;
+}
+.activites .activites__container {
   display: flex;
   justify-content: center;
   align-items: stretch;
   height: 500px;
   margin-left: 15px;
-  margin-top: 20px;
+  padding-top: 5px;
 }
-.activites__container--item {
+.activites .activites__container--item {
   flex-basis: 25%;
-  margin: 1px;
 }
-.activites__container--item .container {
+.activites .activites__container--item .container {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -1173,19 +1182,19 @@ main #img17 {
   box-shadow: 3px 3px 7px #F2F2F2;
   border-radius: 15px;
 }
-.activites__container--item .container--item-img {
+.activites .activites__container--item .container--item-img {
   flex-basis: 100%;
   position: relative;
   max-width: 400px;
-  width: 160px;
+  width: 150px;
   min-width: 150px;
-  height: 380px;
+  height: 320px;
 }
-.activites__container--item .container--item-point-d-interet1 {
+.activites .activites__container--item .container--item-point-d-interet1 {
   flex-basis: 100%;
   max-width: 400px;
-  width: 160px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   min-width: 150px;
   font-weight: 700;
   padding-left: 9px;
@@ -1193,36 +1202,57 @@ main #img17 {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.activites__container--item .xcontainer {
+.activites .activites__container--item .xcontainer {
   display: flex;
   flex-wrap: wrap;
 }
-.activites__container--item .xcontainer--item {
+.activites .activites__container--item .xcontainer--item {
   flex-basis: 100%;
 }
-.activites__container--item .xcontainer--item .container {
+.activites .activites__container--item .xcontainer--item .container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
-.activites__container--item .xcontainer--item .container--item-img {
+.activites .activites__container--item .xcontainer--item .container--item-img {
   position: relative;
   flex-basis: 100%;
   max-width: 400px;
   min-width: 150px;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 120px;
 }
-.activites__container--item .xcontainer--item .container--item-point-d-interet2 {
+.activites .activites__container--item .xcontainer--item .container--item-point-d-interet2 {
   flex-basis: 100%;
   max-width: 400px;
   min-width: 150px;
-  width: 160px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   padding-left: 9px;
   padding-top: 15px;
   font-weight: 700;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+#un {
+  padding-left: 0px;
+  padding-right: 9px;
+}
+
+#deux {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#trois {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#quatre {
+  padding-left: 9px;
+  padding-right: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
