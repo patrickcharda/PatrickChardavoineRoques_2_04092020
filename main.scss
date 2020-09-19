@@ -126,10 +126,14 @@ main {
     @include photos($photos__ville);
     @include photospop($photos__populaires);
     @include photosactivites($photos__activites);
+    @include mobile-only {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-.header, .search {
-    margin-left: 2%;
+.search  {
+    //margin-left: 2%;
 }
 .header__nav {
     display: flex;
@@ -137,7 +141,7 @@ main {
     align-items: center;
     padding-top: 20px;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 1%;
     & a.nav__link {
         //display: inline-block;
         //width: 150px;
@@ -180,10 +184,17 @@ main {
     &__activites {
         text-align: right;
     }
+    @include middle {
+        padding-left: 1%;
+    }
+    @include large {
+        padding-left: 2%;
+    }
     @include mobile-only {
         justify-content: center;
         flex-wrap: wrap;
         padding-top: 5px;
+        padding-left: 0%;
         & a.nav__link {
             display: inline-block;
             width: 165px;
@@ -440,7 +451,7 @@ main {
 
 .hebergement__container {
     margin-top: 15px;
-    margin-left: 15px;
+    //margin-left: 15px;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -902,16 +913,16 @@ main {
     align-items: flex-start;
     margin-top: 50px;
     margin-bottom: 15px;
-    &--titre {
+    /*&--titre {
         margin-left: 20px;
-        //margin-bottom: 15px;
-    }
+
+    }*/
     .activites__container {
         display: flex;
         justify-content: center;
         align-items: stretch;
         height: 500px;
-        margin-left: 15px;
+        //margin-left: 15px;
         padding-top: 5px;
         &--item {
             flex-basis: 25%;
@@ -924,7 +935,7 @@ main {
                 align-items: stretch;
                 flex-wrap: wrap;
                 flex-grow: 0;
-                box-shadow: 3px 3px 7px $color-background;
+                box-shadow: 3px 3px 7px rgb(172, 168, 168);
                 border-radius: 15px;
                 &--item-img {
                     flex-basis: 100%;

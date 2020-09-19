@@ -226,9 +226,11 @@ main #img17 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
-.header, .search {
-  margin-left: 2%;
+@media only screen and (max-width: 620px) {
+  main {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .header__nav {
@@ -237,7 +239,7 @@ main #img17 {
   align-items: center;
   padding-top: 20px;
   padding-left: 2%;
-  padding-right: 2%;
+  padding-right: 1%;
 }
 .header__nav a.nav__link {
   padding: 15px;
@@ -277,11 +279,22 @@ main #img17 {
 .header__nav__activites {
   text-align: right;
 }
+@media only screen and (max-width: 920px) {
+  .header__nav {
+    padding-left: 1%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .header__nav {
+    padding-left: 2%;
+  }
+}
 @media only screen and (max-width: 620px) {
   .header__nav {
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 5px;
+    padding-left: 0%;
   }
   .header__nav a.nav__link {
     display: inline-block;
@@ -528,7 +541,6 @@ main #img17 {
 
 .hebergement__container {
   margin-top: 15px;
-  margin-left: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -1158,16 +1170,16 @@ main #img17 {
   align-items: flex-start;
   margin-top: 50px;
   margin-bottom: 15px;
-}
-.activites--titre {
-  margin-left: 20px;
+  /*&--titre {
+      margin-left: 20px;
+
+  }*/
 }
 .activites .activites__container {
   display: flex;
   justify-content: center;
   align-items: stretch;
   height: 500px;
-  margin-left: 15px;
   padding-top: 5px;
 }
 .activites .activites__container--item {
@@ -1179,7 +1191,7 @@ main #img17 {
   align-items: stretch;
   flex-wrap: wrap;
   flex-grow: 0;
-  box-shadow: 3px 3px 7px #F2F2F2;
+  box-shadow: 3px 3px 7px #aca8a8;
   border-radius: 15px;
 }
 .activites .activites__container--item .container--item-img {
