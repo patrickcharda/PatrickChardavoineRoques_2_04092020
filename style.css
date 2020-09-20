@@ -1199,10 +1199,6 @@ main #img17 {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 50px;
-  margin-bottom: 15px;
-  /*&--titre {
-      margin-left: 20px;
-  }*/
 }
 .activites .activites__container {
   display: flex;
