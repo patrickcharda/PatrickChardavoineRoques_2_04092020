@@ -924,6 +924,12 @@ main {
         height: 500px;
         //margin-left: 15px;
         padding-top: 5px;
+        @include middle {
+            flex-wrap: wrap;
+        }
+        @include mobile-only {
+            flex-wrap: wrap;
+        }
         &--item {
             flex-basis: 25%;
             //margin: 1px;
@@ -944,18 +950,28 @@ main {
                     width: 150px;
                     min-width: 150px;
                     height: 320px;
+                    @include mobile-only {
+                        height: 120px;
+                    }
+                    @include middle {
+                        height: 120px;
+                    }
+
                 }
                 &--item-point-d-interet1 {
                     flex-basis: 100%;
                     max-width: 400px;
                     width: 150px;
-                    height: 40px;
+                    height: 60px;
                     min-width: 150px;
                     font-weight: 700;
                     padding-left: 9px;
                     padding-top: 15px;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
+                    @include mobile-only {
+                        font-size: smaller;
+                    }
                 }
             }
             & .xcontainer {
@@ -963,12 +979,22 @@ main {
                 flex-wrap: wrap;
                 //padding-left: 3px;
                 //padding-right: 3px;
+                @include mobile-only {
+                    flex-wrap: nowrap;
+                }
+                @include middle {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                }
                 &--item {
                     flex-basis: 100%;
                     & .container {
                         display: flex;
                         flex-wrap: wrap;
-                        margin-bottom: 40px;
+                        margin-bottom: 20px;
+                        @include middle {
+                            margin-right: 18px;
+                        }
                         &--item-img {
                             position: relative;
                             flex-basis: 100%;
@@ -982,12 +1008,15 @@ main {
                             max-width: 400px;
                             min-width: 150px;
                             width: 150px;
-                            height: 40px;
+                            height: 60px;
                             padding-left: 9px;
                             padding-top: 15px;
                             font-weight: 700;
                             border-bottom-left-radius: 15px;
-                            border-bottom-right-radius: 15px;   
+                            border-bottom-right-radius: 15px;
+                            @include mobile-only {
+                                font-size: smaller;
+                            }   
                         }
                     }
                 }
@@ -998,18 +1027,45 @@ main {
 #un {
     padding-left: 0px;
     padding-right: 9px;
+    @include middle {
+        flex-basis: 33.33%;
+    }
 }
 #deux {
     padding-left: 9px;
     padding-right: 9px;
+    @include mobile-only {
+        flex-basis: 50%;
+    }
+    @include middle {
+        flex-basis: 66.66%;
+    }
 }
 #trois {
     padding-left: 9px;
     padding-right: 9px;
+    @include middle {
+        flex-basis: 33.33%;
+    }
 }
 #quatre {
     padding-left: 9px;
     padding-right: 0px;
+    @include mobile-only {
+        flex-basis: 50%;
+    }
+    @include middle {
+        flex-basis: 66.66%;
+    }
 }
-
+#c2 {
+    @include middle {
+        margin-right: 0px;
+    }
+}
+#c4 {
+    @include middle {
+        margin-right: 0px;
+    }
+}
  
