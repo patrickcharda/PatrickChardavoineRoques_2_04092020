@@ -5,7 +5,6 @@
 body {
     justify-content: center;
     font-family: 'Raleway', sans-serif;
-    //width: 1200px;
 }
 
 //variables
@@ -736,7 +735,7 @@ main {
                         height: 140px;
                     }
                     @include mobile-only {
-                        width: 200px;
+                        width: 170px;
                         max-width: 300px;
                         height: 125px;
                     }
@@ -934,7 +933,6 @@ main {
     margin-bottom: 15px;
     /*&--titre {
         margin-left: 20px;
-
     }*/
     .activites__container {
         display: flex;
@@ -1224,4 +1222,69 @@ main {
         margin-bottom: 20px;
     }
 }
- 
+footer {
+    height: 450px;
+}
+.pied-de-page {
+    background-color: $color-background;
+    display: flex;
+    justify-content: flex-start;
+    @include mobile-only {
+        margin-top: 720px;
+        flex-wrap: wrap;
+    }
+    &__apropos {
+        flex-basis: 33.33%;
+        @include mobile-only {
+            flex-basis: 100%;
+        }
+        & > h4 {
+            margin-left: 30px;
+        }
+        & ul {
+            padding-left: 30px;
+        }
+        & li {
+            list-style-type: none;
+            font-size: small;
+            margin-left: 0px;
+            padding-bottom: 5px;
+        }
+    }
+    &__noshebergements {
+        flex-basis: 33.33%;
+        @include mobile-only {
+            flex-basis: 100%;
+        }
+        & > h4 {
+            margin-left: 30px;
+        }
+        & ul {
+            padding-left: 30px;
+        }
+        & li {
+            list-style-type: none;
+            font-size: small;
+            margin-left: 0px;
+            padding-bottom: 5px;
+        }
+    }
+    &__assistance {
+        flex-basis: 33.33%;
+        @include mobile-only {
+            flex-basis: 100%;
+        }
+        & > h4 {
+            margin-left: 30px;
+        }
+        & ul {
+            padding-left: 30px;
+        }
+        & li {
+            list-style-type: none;
+            font-size: small;
+            margin-left: 0px;
+            padding-bottom: 5px;
+        }
+    }
+}
