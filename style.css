@@ -981,7 +981,7 @@ main #img17 {
 }
 @media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
-    width: 200px;
+    width: 170px;
     max-width: 300px;
     height: 125px;
   }
@@ -1202,7 +1202,6 @@ main #img17 {
   margin-bottom: 15px;
   /*&--titre {
       margin-left: 20px;
-
   }*/
 }
 .activites .activites__container {
@@ -1539,6 +1538,82 @@ main #img17 {
     margin-left: 0px;
     margin-bottom: 20px;
   }
+}
+
+footer {
+  height: 450px;
+}
+
+.pied-de-page {
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 620px) {
+  .pied-de-page {
+    margin-top: 720px;
+    flex-wrap: wrap;
+  }
+}
+.pied-de-page__apropos {
+  flex-basis: 33.33%;
+}
+@media only screen and (max-width: 620px) {
+  .pied-de-page__apropos {
+    flex-basis: 100%;
+  }
+}
+.pied-de-page__apropos > h4 {
+  margin-left: 30px;
+}
+.pied-de-page__apropos ul {
+  padding-left: 30px;
+}
+.pied-de-page__apropos li {
+  list-style-type: none;
+  font-size: small;
+  margin-left: 0px;
+  padding-bottom: 5px;
+}
+.pied-de-page__noshebergements {
+  flex-basis: 33.33%;
+}
+@media only screen and (max-width: 620px) {
+  .pied-de-page__noshebergements {
+    flex-basis: 100%;
+  }
+}
+.pied-de-page__noshebergements > h4 {
+  margin-left: 30px;
+}
+.pied-de-page__noshebergements ul {
+  padding-left: 30px;
+}
+.pied-de-page__noshebergements li {
+  list-style-type: none;
+  font-size: small;
+  margin-left: 0px;
+  padding-bottom: 5px;
+}
+.pied-de-page__assistance {
+  flex-basis: 33.33%;
+}
+@media only screen and (max-width: 620px) {
+  .pied-de-page__assistance {
+    flex-basis: 100%;
+  }
+}
+.pied-de-page__assistance > h4 {
+  margin-left: 30px;
+}
+.pied-de-page__assistance ul {
+  padding-left: 30px;
+}
+.pied-de-page__assistance li {
+  list-style-type: none;
+  font-size: small;
+  margin-left: 0px;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
