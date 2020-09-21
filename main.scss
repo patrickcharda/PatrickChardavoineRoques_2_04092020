@@ -131,6 +131,7 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
 main {
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: -25px;
     & h1 {
         font-weight: 600;
     }
@@ -147,6 +148,7 @@ main {
     @include mobile-only {
         margin-left: 0;
         margin-right: 0;
+        margin-bottom: -5px;
     }
 }
 
@@ -946,11 +948,8 @@ main {
         }
         &--item {
             flex-basis: 25%;
-            //margin: 1px;
             & .container {
                 display: flex;
-                //padding-right: 3px;
-                //padding-left: 3px;
                 justify-content: center;
                 align-items: stretch;
                 flex-wrap: wrap;
@@ -979,7 +978,6 @@ main {
                         height: 120px;
                         max-width: 600px;
                         width: 225px;
-                        //flex-shrink: 4;
                         box-shadow: 0 0 5px rgb(172, 168, 168);
                         border-top-left-radius: 15px;
                         border-top-right-radius: 15px;
@@ -994,28 +992,27 @@ main {
                     min-width: 150px;
                     font-weight: 700;
                     padding-left: 9px;
-                    padding-top: 15px;
+                    padding-top: 24px;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
                     @include middle {
                         max-width: 400px;
                         width: 150px;
+                        padding-top: 23px;
                     }
                     @include mobile-only {
                         font-size: smaller;
                         max-width: 600px;
                         width: 225px;
-                        //flex-shrink: 4;
                         box-shadow: 0 0 5px rgb(172, 168, 168);
                         border-top: none;
+                        padding-top: 27px;
                     }
                 }
             }
             & .xcontainer {
                 display: flex;
                 flex-wrap: wrap;
-                //padding-left: 3px;
-                //padding-right: 3px;
                 @include middle {
                     flex-wrap: nowrap;
                     justify-content: space-between;
@@ -1052,7 +1049,6 @@ main {
                                 position: relative;
                                 max-width: 600px;
                                 width: 225px;
-                                //flex-shrink: 1;
                                 height: 120px;
                                 box-shadow: 0 0 5px rgb(172, 168, 168);
                                 border-top-left-radius: 15px;
@@ -1067,22 +1063,23 @@ main {
                             width: 150px;
                             height: 60px;
                             padding-left: 9px;
-                            padding-top: 15px;
+                            padding-top: 24px;
                             font-weight: 700;
                             border-bottom-left-radius: 15px;
                             border-bottom-right-radius: 15px;
                             @include middle {
                                 max-width: 400px;
                                 width: 150px;
+                                padding-top: 23px;
                             }
                             @include mobile-only {
                                 font-size: smaller;
                                 max-width: 600px;
                                 width: 225px;
-                                //flex-shrink: 1;
                                 height: 60px;
                                 box-shadow: 0 0 5px rgb(172, 168, 168);
                                 border-top: none;
+                                padding-top: 27px;
                             }  
                         }
                     }
