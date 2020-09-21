@@ -17,6 +17,7 @@ body {
 main {
   margin-left: 2%;
   margin-right: 2%;
+  margin-bottom: -25px;
 }
 main h1 {
   font-weight: 600;
@@ -260,6 +261,7 @@ main #img17 {
   main {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: -5px;
   }
 }
 
@@ -1272,7 +1274,7 @@ main #img17 {
   min-width: 150px;
   font-weight: 700;
   padding-left: 9px;
-  padding-top: 15px;
+  padding-top: 24px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -1280,6 +1282,7 @@ main #img17 {
   .activites .activites__container--item .container--item-point-d-interet1 {
     max-width: 400px;
     width: 150px;
+    padding-top: 23px;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -1289,6 +1292,7 @@ main #img17 {
     width: 225px;
     box-shadow: 0 0 5px #aca8a8;
     border-top: none;
+    padding-top: 27px;
   }
 }
 .activites .activites__container--item .xcontainer {
@@ -1359,7 +1363,7 @@ main #img17 {
   width: 150px;
   height: 60px;
   padding-left: 9px;
-  padding-top: 15px;
+  padding-top: 24px;
   font-weight: 700;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -1368,6 +1372,7 @@ main #img17 {
   .activites .activites__container--item .xcontainer--item .container--item-point-d-interet2 {
     max-width: 400px;
     width: 150px;
+    padding-top: 23px;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -1378,6 +1383,7 @@ main #img17 {
     height: 60px;
     box-shadow: 0 0 5px #aca8a8;
     border-top: none;
+    padding-top: 27px;
   }
 }
 
