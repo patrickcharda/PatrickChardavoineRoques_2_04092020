@@ -421,6 +421,9 @@ main {
             border-radius: 50%;
             background-color: $color-secondary;
             border: 3px solid $color-secondary;
+            &:hover {
+                background-color: $color-background;
+            }
         }
         &--right {
             display: inline-block;
@@ -435,6 +438,9 @@ main {
         &--insideinput {
             padding-left: 7px;
             padding-right: 5px;
+        }
+        &:hover {
+            background-color: $color-background;
         }
     }
 }
@@ -527,6 +533,7 @@ main {
                     padding-right: 10px;
                 }             
                 & .annonce1 {
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -745,9 +752,10 @@ main {
                     display: flex;
                     flex-direction : column;
                     justify-content: flex-end;
+                    width: 100%;
                     font-weight: bold;
                     padding-right: 7px;
-                    max-width: 210px;
+                    //max-width: 210px;
                     &__container {
                         display: flex;
                         flex-direction: column;
@@ -856,6 +864,10 @@ main {
 }
 
 .item--fraction1, .item--fraction2, .item--fraction3 {
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
     @include large {
         //flex-basis: 50%;
     }
@@ -868,6 +880,9 @@ main {
     }
 }
 .item--fraction6, .item--fraction7 {
+    &:hover {
+        cursor: pointer;
+    }
     @include large {
         //flex-basis: 50%;
     }
@@ -881,6 +896,9 @@ main {
 }
 
 .item--fraction4 {
+    &:hover {
+        cursor: pointer;
+    }
     position: absolute;
     clip: rect(0,0,0,0);
     @include large {
@@ -898,6 +916,9 @@ main {
 }
 
 .item--fraction5 {
+    &:hover {
+        cursor: pointer;
+    }
     position: relative;
     @include large {
         position: absolute;
