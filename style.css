@@ -538,6 +538,9 @@ main #img17 {
   background-color: #DEEBFF;
   border: 3px solid #DEEBFF;
 }
+.filtres__inputpicto--left:hover {
+  background-color: #F2F2F2;
+}
 .filtres__inputpicto--right {
   display: inline-block;
   border: none;
@@ -545,6 +548,9 @@ main #img17 {
 .filtres__inputpicto--insideinput {
   padding-left: 7px;
   padding-right: 5px;
+}
+.filtres__inputpicto:hover {
+  background-color: #F2F2F2;
 }
 
 .message {
@@ -646,6 +652,7 @@ main #img17 {
   }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -989,12 +996,13 @@ main #img17 {
   }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 100%;
   font-weight: bold;
   padding-right: 7px;
-  max-width: 210px;
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details__container {
   display: flex;
@@ -1119,6 +1127,12 @@ main #img17 {
   flex-basis: 30%;
 }
 
+.item--fraction1, .item--fraction2, .item--fraction3 {
+  position: relative;
+}
+.item--fraction1:hover, .item--fraction2:hover, .item--fraction3:hover {
+  cursor: pointer;
+}
 @media only screen and (max-width: 920px) {
   .item--fraction1, .item--fraction2, .item--fraction3 {
     flex-basis: 100%;
@@ -1130,6 +1144,9 @@ main #img17 {
   }
 }
 
+.item--fraction6:hover, .item--fraction7:hover {
+  cursor: pointer;
+}
 @media only screen and (max-width: 920px) {
   .item--fraction6, .item--fraction7 {
     flex-basis: 100%;
@@ -1144,6 +1161,9 @@ main #img17 {
 .item--fraction4 {
   position: absolute;
   clip: rect(0, 0, 0, 0);
+}
+.item--fraction4:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 1200px) {
   .item--fraction4 {
@@ -1165,6 +1185,9 @@ main #img17 {
 
 .item--fraction5 {
   position: relative;
+}
+.item--fraction5:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 1200px) {
   .item--fraction5 {
@@ -1267,6 +1290,7 @@ main #img17 {
   }
 }
 .activites .activites__container--item .container--item-point-d-interet1 {
+  position: relative;
   flex-basis: 100%;
   max-width: 400px;
   width: 150px;
@@ -1357,6 +1381,7 @@ main #img17 {
   }
 }
 .activites .activites__container--item .xcontainer--item .container--item-point-d-interet2 {
+  position: relative;
   flex-basis: 100%;
   max-width: 400px;
   min-width: 150px;
@@ -1616,6 +1641,15 @@ footer {
   font-size: small;
   margin-left: 0px;
   padding-bottom: 5px;
+}
+
+.click-photo1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
