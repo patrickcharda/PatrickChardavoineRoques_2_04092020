@@ -6,6 +6,12 @@ body {
     justify-content: center;
     font-family: 'Raleway', sans-serif;
 }
+.container-xl {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+}
 
 //variables
 $color-primary: #0065FC;
@@ -51,16 +57,16 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
     }
 }
 
-/*large*/
-@mixin large {
-    @media only screen and (max-width: map-get($breakpoints, "large")) {
+/*middle*/
+@mixin middle {
+    @media only screen and (max-width: map-get($breakpoints, "middle")) {
         @content;
     }
 }
 
-/*middle*/
-@mixin middle {
-    @media only screen and (max-width: map-get($breakpoints, "middle")) {
+/*large*/
+@mixin large {
+    @media only screen and (max-width: map-get($breakpoints, "large")) {
         @content;
     }
 }
@@ -108,6 +114,7 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
         }
     }
 }
+
 @mixin photosactivites($photo_a) {
     @each $key,$value in $photo_a {
         & #{$key} {
@@ -129,9 +136,6 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
 
 
 main {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: -25px;
     & h1 {
         font-weight: 600;
     }
@@ -487,21 +491,21 @@ main {
         flex-basis: 70%;
         flex-grow: 0;
         order: 1;
-        height: 800px;
+        //height: 800px;
         background-color: $color-background;
         border-radius: 20px;
         @include large {
             //flex-basis: 60%;
-            height: 1000px;
+            //height: 1000px;
             max-width: 650px;
         }
         @include middle {
-            height: 1100px;
+            //height: 1100px;
             max-width: none;
             flex-basis: 100%;
         }
         @include mobile-only {
-            height: 1700px;
+            //height: 1700px;
             max-width: none;
             flex-basis: 100%;
         }
@@ -541,7 +545,7 @@ main {
                     border-radius: 15px;
                     border: 1px solid #ffffff;
                     margin: 0 15px 25px 0;
-                    @include large {
+                    /*@include large {
                         align-items: center;
                         background-color: white;
                         border: 0;
@@ -561,15 +565,18 @@ main {
                         flex-wrap: wrap;
                         margin: 0 0 20px 0;
                         //background-color: $color-background;
-                    }
+                    }*/
                     &__photo1 {
                         position: relative;
-                        width: 225px;
+                        flex-shrink: 1;
+                        flex-grow: 1;
+                        //width: 225px;
                         height: 125px;
                         @include photos($photos__ville);
-                        @include large {
+                        /*@include large {
                             //max-width: 300px;
                             flex-shrink: 1;
+                            flex-grow: 1;
                         }
                         @include middle {  
                             flex-shrink: 0;
@@ -595,94 +602,100 @@ main {
                                 //min-width: 160px;
                             }
                         }
-                        }
+                        }*/
                         /*@include large {
                             max-width: 300px;
                             flex-shrink: 1;
                         }*/
                     }
-                    &__nom {
-                        height: 35px;
-                        padding-left: 9px;
-                        padding-top: 7px;
-                        padding-bottom: 5px;
-                        font-size: 1.1em;
-                        font-weight: 700;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 15px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                            font-size: smaller;
-                            //align-self: flex-start;
-                        }
-                    }
-                    &__prix {
-                        height: 25px;
-                        padding-left: 9px;
-                        font-size: .8em;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 50px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                        }
-                    }
-                    &__stars {
-                        height: 50px;
-                        padding-left: 9px;
-                        padding-top: 15px;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 70px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                        }
-                        & .bluestar {
-                            display: inline-block;
-                            position: relative;
-                            vertical-align: middle;
-                            width: 15px;
-                            height: 15px;
-                            &--blueimg {
+                    &__details {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        padding: 8px;
+                        &__nom {
+                            //height: 35px;
+                            //padding-left: 9px;
+                            //padding-top: 7px;
+                            //padding-bottom: 5px;
+                            font-size: 1.1em;
+                            font-weight: 700;
+                            /*@include middle {
                                 position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                background-image: URL("./images/bluestar.svg");
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: cover;
+                                left: 320px;
+                                top: 15px;
                             }
+                            @include mobile-only {
+                                flex-basis: 100%;
+                                position: relative;
+                                left: 0;
+                                top: 0;
+                                font-size: smaller;
+                                //align-self: flex-start;
+                            }*/
                         }
-                        & .greystar {
-                            display: inline-block;
-                            position: relative;
-                            vertical-align: middle;
-                            width: 15px;
-                            height: 15px;
-                            &--greyimg {
+                        &__prix {
+                            //height: 25px;
+                            //padding-left: 9px;
+                            font-size: .8em;
+                            /*@include middle {
                                 position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                background-image: URL("./images/greystar.svg");
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: cover;
+                                left: 320px;
+                                top: 50px;
+                            }
+                            @include mobile-only {
+                                flex-basis: 100%;
+                                position: relative;
+                                left: 0;
+                                top: 0;
+                            }*/
+                        }
+                        &__stars {
+                            //height: 50px;
+                            padding-left: 9px;
+                            padding-top: 15px;
+                            /*@include middle {
+                                position: absolute;
+                                left: 320px;
+                                top: 70px;
+                            }
+                            @include mobile-only {
+                                flex-basis: 100%;
+                                position: relative;
+                                left: 0;
+                                top: 0;
+                            }*/
+                            & .bluestar {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 15px;
+                                height: 15px;
+                                &--blueimg {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: URL("./images/bluestar.svg");
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                }
+                            }
+                            & .greystar {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 15px;
+                                height: 15px;
+                                &--greyimg {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: URL("./images/greystar.svg");
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                }
                             }
                         }
                     }
@@ -697,7 +710,7 @@ main {
         margin-left: 34px;
         order: 2;
         padding-right: 10px;
-        height: 800px;
+        //height: 800px;
         @include large {
             flex-basis: 40%;
             height: 1000px;
@@ -956,7 +969,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: stretch;
-        height: 500px;
+        //height: 500px;
         //margin-left: 15px;
         padding-top: 5px;
         @include middle {
@@ -1237,15 +1250,13 @@ main {
         margin-bottom: 20px;
     }
 }
-footer {
-    height: 450px;
-}
+
 .pied-de-page {
     background-color: $color-background;
     display: flex;
     justify-content: flex-start;
     @include mobile-only {
-        margin-top: 720px;
+        //margin-top: 720px;
         flex-wrap: wrap;
     }
     &__apropos {
@@ -1305,6 +1316,7 @@ footer {
 }
 .click-photo1 {
     position: absolute;
+    z-index: 5;
     width: 100%;
     height: 100%;
     top: 0;
