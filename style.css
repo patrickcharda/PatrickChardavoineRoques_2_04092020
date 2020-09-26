@@ -8,17 +8,19 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.container-xl {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 /*smartphone*/
-/*large*/
 /*middle*/
+/*large*/
 /*photos hébergements ville*/
 /*photos hébergements les plus populaires*/
 /*photos activités*/
-main {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: -25px;
-}
 main h1 {
   font-weight: 600;
 }
@@ -261,7 +263,6 @@ main #img17 {
   main {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: -5px;
   }
 }
 
@@ -270,8 +271,6 @@ main #img17 {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  padding-left: 2%;
-  padding-right: 1%;
 }
 .header__nav a.nav__link {
   padding: 15px;
@@ -310,16 +309,6 @@ main #img17 {
 }
 .header__nav__activites {
   text-align: right;
-}
-@media only screen and (max-width: 920px) {
-  .header__nav {
-    padding-left: 1%;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .header__nav {
-    padding-left: 2%;
-  }
 }
 @media only screen and (max-width: 620px) {
   .header__nav {
@@ -586,6 +575,7 @@ main #img17 {
 @media only screen and (max-width: 920px) {
   .hebergement__container {
     justify-content: stretch;
+    align-items: center;
     flex-wrap: wrap-reverse;
   }
 }
@@ -593,26 +583,21 @@ main #img17 {
   flex-basis: 70%;
   flex-grow: 0;
   order: 1;
-  height: 800px;
   background-color: #F2F2F2;
   border-radius: 20px;
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville {
-    height: 1000px;
-    max-width: 650px;
+    flex-basis: 60%;
   }
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville {
-    height: 1100px;
-    max-width: none;
     flex-basis: 100%;
   }
 }
 @media only screen and (max-width: 620px) {
   .hebergement__container--item__ville {
-    height: 1700px;
     max-width: none;
     flex-basis: 100%;
   }
@@ -622,11 +607,24 @@ main #img17 {
   flex-direction: column;
   justify-content: center;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container {
+    align-items: stretch;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
   align-self: flex-start;
   padding-left: 25px;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
+    padding-left: 15px;
+  }
+}
 .hebergement__container--item__ville .annonces__container--item .photos1__container {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -640,10 +638,9 @@ main #img17 {
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container {
     flex-wrap: wrap;
-    padding-right: 15px;
-    /*& .item--fraction1, .item--fraction2, .item--fraction1.ter, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
-        flex-basis: 100%;
-    }*/
+  }
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction1, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction2, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction3, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction4, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction5, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction6, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction7 {
+    flex-basis: 100%;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -660,37 +657,59 @@ main #img17 {
   border-radius: 15px;
   border: 1px solid #ffffff;
   margin: 0 15px 25px 0;
+  /*@include middle {
+      background-color: white;
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  @include mobile-only {
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 0 20px 0;
+      //background-color: $color-background;
+  }*/
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
-    align-items: center;
     background-color: white;
     border: 0;
   }
 }
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
-    background-color: white;
-    position: relative;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-}
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
-    position: relative;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 0 20px 0;
-  }
-}
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
   position: relative;
-  width: 225px;
+  flex-shrink: 1;
+  flex-grow: 1;
   height: 125px;
+  /*@include middle {  
+      flex-shrink: 0;
+      & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 15px;
+          width: 300px;
+      }
+  @include mobile-only {
+      display: flex;
+      flex-basis: 100%;
+      flex-shrink: 1;
+      flex-grow: 1;
+      & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 0;
+          flex-basis: 100%;
+          flex-grow: 1;
+          width: 100%;
+          max-width: 100%;
+          //min-width: 160px;
+      }
+  }
+  }*/
   /*@include large {
       max-width: 300px;
       flex-shrink: 1;
@@ -795,108 +814,69 @@ main #img17 {
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
     flex-shrink: 1;
-  }
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
-    flex-shrink: 0;
-  }
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img11 {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 15px;
-    width: 300px;
-  }
-}
-@media only screen and (max-width: 920px) and (max-width: 620px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
-    display: flex;
-    flex-basis: 100%;
-    flex-shrink: 1;
     flex-grow: 1;
   }
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img2, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img3, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img4, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img5, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img6, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img7, .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img11 {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 0;
-    flex-basis: 100%;
-    flex-grow: 1;
-    width: 100%;
-    max-width: 100%;
-  }
 }
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
-  height: 35px;
-  padding-left: 9px;
-  padding-top: 7px;
-  padding-bottom: 5px;
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 8px;
+}
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__nom {
   font-size: 1.1em;
   font-weight: 700;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
-    position: absolute;
-    left: 320px;
-    top: 15px;
+  /*@include middle {
+      position: absolute;
+      left: 320px;
+      top: 15px;
   }
+  @include mobile-only {
+      flex-basis: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      font-size: smaller;
+      //align-self: flex-start;
+  }*/
 }
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__nom {
-    flex-basis: 100%;
-    position: relative;
-    left: 0;
-    top: 0;
-    font-size: smaller;
-  }
-}
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
-  height: 25px;
-  padding-left: 9px;
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__prix {
   font-size: 0.8em;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
-    position: absolute;
-    left: 320px;
-    top: 50px;
+  /*@include middle {
+      position: absolute;
+      left: 320px;
+      top: 50px;
   }
+  @include mobile-only {
+      flex-basis: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+  }*/
 }
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__prix {
-    flex-basis: 100%;
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-}
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
-  height: 50px;
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars {
   padding-left: 9px;
   padding-top: 15px;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
-    position: absolute;
-    left: 320px;
-    top: 70px;
+  /*@include middle {
+      position: absolute;
+      left: 320px;
+      top: 70px;
   }
+  @include mobile-only {
+      flex-basis: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+  }*/
 }
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars {
-    flex-basis: 100%;
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-}
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .bluestar {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars .bluestar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .bluestar--blueimg {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars .bluestar--blueimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -905,14 +885,14 @@ main #img17 {
   background-position: center;
   background-size: cover;
 }
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .greystar {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars .greystar {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   width: 15px;
   height: 15px;
 }
-.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__stars .greystar--greyimg {
+.hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars .greystar--greyimg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -925,135 +905,146 @@ main #img17 {
   flex-basis: 30%;
   background-color: #F2F2F2;
   border-radius: 20px;
-  margin-left: 34px;
+  margin-left: 30px;
   order: 2;
-  padding-right: 10px;
-  height: 800px;
+  padding-right: 15px;
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire {
     flex-basis: 40%;
-    height: 1000px;
   }
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__populaire {
     flex-basis: 100%;
-    height: 600px;
     margin-bottom: 25px;
     margin-left: 0px;
+    flex-shrink: 0;
+    padding-left: 15px;
   }
 }
 .hebergement__container--item__populaire .annonce2 {
+  position: relative;
   border-radius: 20px;
   margin-bottom: 10px;
 }
 .hebergement__container--item__populaire .annonces__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: stretch;
+  /*@include middle {
+      align-items: stretch;
+  }*/
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire .annonces__container {
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: stretch;
+    flex-wrap: wrap;
   }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
   background-color: white;
   border-radius: 20px;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container {
-    margin-left: 10px;
+  /*@include middle {
+      margin-left: 10px;
   }
-}
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container {
-    margin-left: 10px;
-  }
+  @include mobile-only {
+      margin-left: 10px;
+  }*/
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
-  position: relative;
-  width: 140px;
-  max-width: 140px;
-  height: 140px;
+  flex-basis: 40%;
+  /*@include middle {
+      width: 300px;
+      max-width: 300px;
+      min-width: 160px;
+      height: 140px;
+  }
+  @include mobile-only {
+      width: 170px;
+      max-width: 300px;
+      height: 125px;
+  }*/
+}
+.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+  max-height: 140px;
+  max-width: 110px;
+  min-width: 80px;
+}
+@media only screen and (max-width: 1200px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+    max-height: 140px;
+    max-width: 110px;
+    min-width: 80px;
+  }
 }
 @media only screen and (max-width: 920px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
-    width: 300px;
-    max-width: 300px;
-    min-width: 160px;
-    height: 140px;
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+    max-height: 140px;
+    max-width: 200px;
+    min-width: 80px;
   }
 }
 @media only screen and (max-width: 620px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+    max-height: 140px;
+    max-width: 110px;
+    min-width: 80px;
+  }
+}
+@media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
-    width: 170px;
-    max-width: 300px;
-    height: 125px;
+    flex-basis: 40%;
   }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
+  flex-basis: 60%;
   font-weight: bold;
-  padding-right: 7px;
+  padding: 8px;
+  padding-left: 11px;
+}
+@media only screen and (max-width: 1200px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details {
+    flex-basis: 60%;
+  }
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details__container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-content: flex-end;
-  height: 140px;
-}
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details__container {
-    height: 120px;
-  }
+  /*@include mobile-only {
+      height: 120px;
+  }*/
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
-  padding-top: 7px;
-  padding-left: 7px;
-  flex-basis: 20%;
   font-weight: 700;
   font-size: 1.1em;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
-    padding-left: 29px;
+  /*@include middle {
+      padding-left: 29px;
   }
-}
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
-    padding-left: 19px;
-    font-size: smaller;
-  }
+  @include mobile-only {
+      padding-left: 19px;
+      font-size: smaller;
+  }*/
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
-  padding-top: 7px;
-  padding-left: 7px;
-  flex-basis: 60%;
   font-size: 0.8em;
   font-weight: normal;
-}
-@media only screen and (max-width: 920px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
-    padding-left: 29px;
+  /*@include middle {
+      padding-left: 29px;
   }
-}
-@media only screen and (max-width: 620px) {
-  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
-    padding-left: 19px;
-    font-size: smaller;
-  }
-}
-.hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
-  flex-basis: 20%;
+  @include mobile-only {
+      padding-left: 19px;
+      font-size: smaller;
+  }*/
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
@@ -1119,19 +1110,35 @@ main #img17 {
 }
 @media only screen and (max-width: 920px) {
   .head {
-    padding-left: 25px;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .head {
+    flex-basis: 100%;
   }
 }
 
 #elem1, #elem2, #elem3 {
   flex-basis: 30%;
 }
+@media only screen and (max-width: 1200px) {
+  #elem1, #elem2, #elem3 {
+    flex-basis: 100%;
+  }
+}
 
 .item--fraction1, .item--fraction2, .item--fraction3 {
-  position: relative;
+  position: static;
+  flex-basis: 33.33%;
 }
 .item--fraction1:hover, .item--fraction2:hover, .item--fraction3:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .item--fraction1, .item--fraction2, .item--fraction3 {
+    flex-basis: 50%;
+  }
 }
 @media only screen and (max-width: 920px) {
   .item--fraction1, .item--fraction2, .item--fraction3 {
@@ -1144,8 +1151,17 @@ main #img17 {
   }
 }
 
+.item--fraction6, .item--fraction7 {
+  position: static;
+  flex-basis: 33.33%;
+}
 .item--fraction6:hover, .item--fraction7:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .item--fraction6, .item--fraction7 {
+    flex-basis: 50%;
+  }
 }
 @media only screen and (max-width: 920px) {
   .item--fraction6, .item--fraction7 {
@@ -1162,12 +1178,13 @@ main #img17 {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
-.item--fraction4:hover {
-  cursor: pointer;
-}
 @media only screen and (max-width: 1200px) {
   .item--fraction4 {
-    position: relative;
+    position: static;
+    flex-basis: 50%;
+  }
+  .item--fraction4:hover {
+    cursor: pointer;
   }
 }
 @media only screen and (max-width: 920px) {
@@ -1184,7 +1201,8 @@ main #img17 {
 }
 
 .item--fraction5 {
-  position: relative;
+  position: static;
+  flex-basis: 33.33%;
 }
 .item--fraction5:hover {
   cursor: pointer;
@@ -1229,7 +1247,6 @@ main #img17 {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  height: 500px;
   padding-top: 5px;
 }
 @media only screen and (max-width: 920px) {
@@ -1567,10 +1584,6 @@ main #img17 {
   }
 }
 
-footer {
-  height: 450px;
-}
-
 .pied-de-page {
   background-color: #F2F2F2;
   display: flex;
@@ -1578,7 +1591,6 @@ footer {
 }
 @media only screen and (max-width: 620px) {
   .pied-de-page {
-    margin-top: 720px;
     flex-wrap: wrap;
   }
 }
@@ -1645,6 +1657,7 @@ footer {
 
 .click-photo1 {
   position: absolute;
+  z-index: 10;
   width: 100%;
   height: 100%;
   top: 0;
