@@ -202,10 +202,10 @@ main {
         text-align: right;
     }
     @include middle {
-        padding-left: 1%;
+        //padding-left: 1%;
     }
     @include large {
-        padding-left: 2%;
+        //padding-left: 2%;
     }
     @include mobile-only {
         justify-content: center;
@@ -470,6 +470,7 @@ main {
     align-items: stretch;
     @include middle {
         justify-content: stretch;
+        align-items: center;
         flex-wrap: wrap-reverse;
     }
     &--item__ville {
@@ -479,11 +480,9 @@ main {
         background-color: $color-background;
         border-radius: 20px;
         @include large {
-            //max-width: 650px;
             flex-basis: 60%;
         }
         @include middle {
-            max-width: none;
             flex-basis: 100%;
         }
         @include mobile-only {
@@ -494,9 +493,18 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include middle {
+                align-items: stretch;
+                padding-left: 15px;
+                padding-right: 15px;
+                
+            }
             & .heading, .plus {
                 align-self: flex-start;
                 padding-left: 25px;
+                @include middle {
+                    padding-left: 15px;
+                }
             }
             &--item .photos1__container {
                 position: relative;
@@ -509,10 +517,9 @@ main {
                 }
                 @include middle {
                     flex-wrap: wrap;
-                    padding-right: 15px;
-                    /*& .item--fraction1, .item--fraction2, .item--fraction1.ter, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6, .item--fraction7 {
                         flex-basis: 100%;
-                    }*/
+                    }
                 }
                 @include mobile-only {
                     padding-right: 10px;
@@ -522,13 +529,11 @@ main {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    //align-items: stretch;
                     background-color: #ffffff;
                     border-radius: 15px;
                     border: 1px solid #ffffff;
                     margin: 0 15px 25px 0;
                     @include large {
-                        //align-items: center;
                         background-color: white;
                         border: 0;
                     }
@@ -555,7 +560,6 @@ main {
                         height: 125px;
                         @include photos($photos__ville);
                         @include large {
-                            //max-width: 300px;
                             flex-shrink: 1;
                             flex-grow: 1;
                         }
@@ -684,16 +688,16 @@ main {
         margin-left: 30px;
         order: 2;
         padding-right: 15px;
-        //padding-left: 10px;
         @include large {
             flex-basis: 40%;
         }
-        /*@include middle {
+        @include middle {
             flex-basis: 100%;
-            height: 600px;
             margin-bottom: 25px;
             margin-left: 0px;
-        }*/
+            flex-shrink: 0;
+            padding-left: 15px;
+        }
         & .annonce2 {
             position: relative;
             border-radius: 20px;
@@ -734,6 +738,16 @@ main {
                         max-width: 110px;
                         min-width: 80px;
                         @include large {
+                            max-height: 140px;
+                            max-width: 110px;
+                            min-width: 80px;
+                        }
+                        @include middle {
+                            max-height: 140px;
+                            max-width: 200px;
+                            min-width: 80px;
+                        }
+                        @include mobile-only {
                             max-height: 140px;
                             max-width: 110px;
                             min-width: 80px;
@@ -855,7 +869,7 @@ main {
     flex-basis: 10%;
     align-self: flex-start;
     @include middle {
-        padding-left: 25px;
+        padding-left: 0;
     }
     @include large {
         flex-basis: 100%;

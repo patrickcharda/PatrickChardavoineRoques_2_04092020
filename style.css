@@ -310,16 +310,6 @@ main #img17 {
 .header__nav__activites {
   text-align: right;
 }
-@media only screen and (max-width: 920px) {
-  .header__nav {
-    padding-left: 1%;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .header__nav {
-    padding-left: 2%;
-  }
-}
 @media only screen and (max-width: 620px) {
   .header__nav {
     justify-content: center;
@@ -585,6 +575,7 @@ main #img17 {
 @media only screen and (max-width: 920px) {
   .hebergement__container {
     justify-content: stretch;
+    align-items: center;
     flex-wrap: wrap-reverse;
   }
 }
@@ -602,7 +593,6 @@ main #img17 {
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville {
-    max-width: none;
     flex-basis: 100%;
   }
 }
@@ -617,9 +607,21 @@ main #img17 {
   flex-direction: column;
   justify-content: center;
 }
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container {
+    align-items: stretch;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
   align-self: flex-start;
   padding-left: 25px;
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
+    padding-left: 15px;
+  }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container {
   position: relative;
@@ -636,10 +638,9 @@ main #img17 {
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container {
     flex-wrap: wrap;
-    padding-right: 15px;
-    /*& .item--fraction1, .item--fraction2, .item--fraction1.ter, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
-        flex-basis: 100%;
-    }*/
+  }
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction1, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction2, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction3, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction4, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction5, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction6, .hebergement__container--item__ville .annonces__container--item .photos1__container .item--fraction7 {
+    flex-basis: 100%;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -907,16 +908,19 @@ main #img17 {
   margin-left: 30px;
   order: 2;
   padding-right: 15px;
-  /*@include middle {
-      flex-basis: 100%;
-      height: 600px;
-      margin-bottom: 25px;
-      margin-left: 0px;
-  }*/
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire {
     flex-basis: 40%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire {
+    flex-basis: 100%;
+    margin-bottom: 25px;
+    margin-left: 0px;
+    flex-shrink: 0;
+    padding-left: 15px;
   }
 }
 .hebergement__container--item__populaire .annonce2 {
@@ -976,6 +980,20 @@ main #img17 {
   min-width: 80px;
 }
 @media only screen and (max-width: 1200px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+    max-height: 140px;
+    max-width: 110px;
+    min-width: 80px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
+    max-height: 140px;
+    max-width: 200px;
+    min-width: 80px;
+  }
+}
+@media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
     max-height: 140px;
     max-width: 110px;
@@ -1092,7 +1110,7 @@ main #img17 {
 }
 @media only screen and (max-width: 920px) {
   .head {
-    padding-left: 25px;
+    padding-left: 0;
   }
 }
 @media only screen and (max-width: 1200px) {
