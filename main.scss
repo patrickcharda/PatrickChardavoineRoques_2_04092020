@@ -486,6 +486,7 @@ main {
         @include mobile-only {
             max-width: none;
             flex-basis: 100%;
+            background-color: white;
         }
         & .annonces__container {
             display: flex;
@@ -531,6 +532,7 @@ main {
                 }
                 @include mobile-only {
                     padding-right: 10px;
+                    margin-left: 0px;
                 }             
                 & .annonce1 {
                     position: relative;
@@ -544,6 +546,10 @@ main {
                     @include large {
                         background-color: white;
                         border: 0;
+                    }
+                    @include mobile-only {
+                        margin: 0 0 20px 0;
+                        box-shadow: 3px 3px 7px rgb(172, 168, 168);
                     }
                     &__photo1 {
                         position: relative;
