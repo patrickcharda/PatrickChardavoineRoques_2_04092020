@@ -6,6 +6,12 @@ body {
     justify-content: center;
     font-family: 'Raleway', sans-serif;
 }
+.container-xl {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+}
 
 //variables
 $color-primary: #0065FC;
@@ -20,9 +26,8 @@ $photos__ville: ("#img1":"./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-
 "#img2":"./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg",
 "#img3":"./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg",
 "#img4":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img5":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img6":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
-"#img7":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
+"#img5":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
+"#img6":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
 "#img11":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
 );
 $photos__populaires: ("#img8":"./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg",
@@ -51,16 +56,16 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
     }
 }
 
-/*large*/
-@mixin large {
-    @media only screen and (max-width: map-get($breakpoints, "large")) {
+/*middle*/
+@mixin middle {
+    @media only screen and (max-width: map-get($breakpoints, "middle")) {
         @content;
     }
 }
 
-/*middle*/
-@mixin middle {
-    @media only screen and (max-width: map-get($breakpoints, "middle")) {
+/*large*/
+@mixin large {
+    @media only screen and (max-width: map-get($breakpoints, "large")) {
         @content;
     }
 }
@@ -108,6 +113,7 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
         }
     }
 }
+
 @mixin photosactivites($photo_a) {
     @each $key,$value in $photo_a {
         & #{$key} {
@@ -129,9 +135,6 @@ $photos__activites_m: ("#img12":"./images/activites/3_medium/reno-laithienne-QUg
 
 
 main {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: -25px;
     & h1 {
         font-weight: 600;
     }
@@ -148,7 +151,6 @@ main {
     @include mobile-only {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: -5px;
     }
 }
 
@@ -158,11 +160,8 @@ main {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    padding-left: 2%;
-    padding-right: 1%;
+
     & a.nav__link {
-        //display: inline-block;
-        //width: 150px;
         padding: 15px; 
         font-weight: 600;
         color: $color-unactivelink;
@@ -193,20 +192,18 @@ main {
     &__inscription {
         text-align: right;
         padding-left: 20px;
-        //border: 1px solid red;
     }
     &__hebergements {
-        //flex-basis: 50%;
         text-align: right;
     }
     &__activites {
         text-align: right;
     }
     @include middle {
-        padding-left: 1%;
+        //padding-left: 1%;
     }
     @include large {
-        padding-left: 2%;
+        //padding-left: 2%;
     }
     @include mobile-only {
         justify-content: center;
@@ -246,7 +243,6 @@ main {
         &__logo {
             flex-basis: 50%;
             order: 1;
-            //align-self: flex-start;
             padding-bottom: 10px;
         }
         &__inscription {
@@ -274,7 +270,6 @@ main {
     flex-direction: row;
     justify-content: flex-end;
     &__link {
-        //display: inline-block;
         padding: 30px; 
         font-weight: 600;
         color: $color-unactivelink;
@@ -329,8 +324,6 @@ main {
     &__picto {
         height: 50px;
         padding: 14px;
-        //padding-right: 24px;
-        //padding-left: 24px;
         margin: 0;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
@@ -427,12 +420,7 @@ main {
         }
         &--right {
             display: inline-block;
-            //justify-content: center;
-            //align-items: center;
             border: none;
-            //padding: 0;
-            //padding-left: 5px;
-            //width: 100%;
         }
 
         &--insideinput {
@@ -475,33 +463,27 @@ main {
 
 .hebergement__container {
     margin-top: 15px;
-    //margin-left: 15px;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     @include middle {
         justify-content: stretch;
+        align-items: center;
         flex-wrap: wrap-reverse;
     }
     &--item__ville {
         flex-basis: 70%;
         flex-grow: 0;
         order: 1;
-        height: 800px;
         background-color: $color-background;
         border-radius: 20px;
         @include large {
-            //flex-basis: 60%;
-            height: 1000px;
-            max-width: 650px;
+            flex-basis: 60%;
         }
         @include middle {
-            height: 1100px;
-            max-width: none;
             flex-basis: 100%;
         }
         @include mobile-only {
-            height: 1700px;
             max-width: none;
             flex-basis: 100%;
         }
@@ -509,25 +491,43 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            //align-items: space-between;
+            @include middle {
+                align-items: stretch;
+                padding-left: 15px;
+                padding-right: 15px;
+                
+            }
+            @include mobile-only {
+                padding-left: 30px;
+            }
             & .heading, .plus {
                 align-self: flex-start;
                 padding-left: 25px;
+                @include middle {
+                    padding-left: 15px;
+                }
             }
             &--item .photos1__container {
+                position: relative;
                 display: flex;
                 justify-content: space-around;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-left: 10px;
+                & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                    flex-basis: 30%;
+                }
                 @include large {
                     flex-wrap: wrap;
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                        flex-basis: 50%;
+                    }
                 }
                 @include middle {
                     flex-wrap: wrap;
-                    padding-right: 15px;
-                    /*& .item--fraction1, .item--fraction2, .item--fraction1.ter, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
                         flex-basis: 100%;
-                    }*/
+                    }
                 }
                 @include mobile-only {
                     padding-right: 10px;
@@ -542,147 +542,66 @@ main {
                     border: 1px solid #ffffff;
                     margin: 0 15px 25px 0;
                     @include large {
-                        align-items: center;
                         background-color: white;
                         border: 0;
                     }
-                    @include middle {
-                        background-color: white;
-                        position: relative;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                    }
-                    @include mobile-only {
-                        position: relative;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        margin: 0 0 20px 0;
-                        //background-color: $color-background;
-                    }
                     &__photo1 {
                         position: relative;
-                        width: 225px;
+                        flex-shrink: 1;
+                        flex-grow: 1;
                         height: 125px;
                         @include photos($photos__ville);
                         @include large {
-                            //max-width: 300px;
-                            flex-shrink: 1;
-                        }
-                        @include middle {  
-                            flex-shrink: 0;
-                            & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-                                border-top-left-radius: 15px;
-                                border-top-right-radius: 0;
-                                border-bottom-left-radius: 15px;
-                                width: 300px;
-                            }
-                        @include mobile-only {
-                            display: flex;
-                            flex-basis: 100%;
                             flex-shrink: 1;
                             flex-grow: 1;
-                            & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-                                border-top-left-radius: 15px;
-                                border-top-right-radius: 15px;
-                                border-bottom-left-radius: 0;
-                                flex-basis: 100%;
-                                flex-grow: 1;
-                                width: 100%;
-                                max-width: 100%;
-                                //min-width: 160px;
+                        }
+                    }
+                    &__details {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        padding: 8px;
+                        &__nom {
+                            font-size: 1.1em;
+                            font-weight: 700;
+                        }
+                        &__prix {
+                            font-size: .8em;
+                        }
+                        &__stars {
+                            padding-left: 9px;
+                            padding-top: 15px;
+                            & .bluestar {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 15px;
+                                height: 15px;
+                                &--blueimg {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: URL("./images/bluestar.svg");
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                }
                             }
-                        }
-                        }
-                        /*@include large {
-                            max-width: 300px;
-                            flex-shrink: 1;
-                        }*/
-                    }
-                    &__nom {
-                        height: 35px;
-                        padding-left: 9px;
-                        padding-top: 7px;
-                        padding-bottom: 5px;
-                        font-size: 1.1em;
-                        font-weight: 700;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 15px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                            font-size: smaller;
-                            //align-self: flex-start;
-                        }
-                    }
-                    &__prix {
-                        height: 25px;
-                        padding-left: 9px;
-                        font-size: .8em;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 50px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                        }
-                    }
-                    &__stars {
-                        height: 50px;
-                        padding-left: 9px;
-                        padding-top: 15px;
-                        @include middle {
-                            position: absolute;
-                            left: 320px;
-                            top: 70px;
-                        }
-                        @include mobile-only {
-                            flex-basis: 100%;
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                        }
-                        & .bluestar {
-                            display: inline-block;
-                            position: relative;
-                            vertical-align: middle;
-                            width: 15px;
-                            height: 15px;
-                            &--blueimg {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                background-image: URL("./images/bluestar.svg");
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: cover;
-                            }
-                        }
-                        & .greystar {
-                            display: inline-block;
-                            position: relative;
-                            vertical-align: middle;
-                            width: 15px;
-                            height: 15px;
-                            &--greyimg {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                background-image: URL("./images/greystar.svg");
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: cover;
+                            & .greystar {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 15px;
+                                height: 15px;
+                                &--greyimg {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: URL("./images/greystar.svg");
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                }
                             }
                         }
                     }
@@ -694,108 +613,86 @@ main {
         flex-basis: 30%;
         background-color: $color-background;
         border-radius: 20px;
-        margin-left: 34px;
+        margin-left: 30px;
         order: 2;
-        padding-right: 10px;
-        height: 800px;
+        padding-right: 15px;
         @include large {
             flex-basis: 40%;
-            height: 1000px;
         }
         @include middle {
             flex-basis: 100%;
-            height: 600px;
             margin-bottom: 25px;
             margin-left: 0px;
+            flex-shrink: 0;
+            padding-left: 15px;
         }
         & .annonce2 {
+            position: relative;
             border-radius: 20px;
             margin-bottom: 10px;
         }
         & .annonces__container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            @include middle {
-                align-items: stretch;
+            align-items: stretch;
+            justify-content: stretch;
+            @include large {
+                display: flex;
+                flex-direction: row;
+                align-items: space-around;
+                justify-content: stretch;
+                flex-wrap: wrap;
             }
             & .annonce2__container {
                 display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: flex-start;
                 background-color: white;
                 border-radius: 20px;
-                @include middle {
-                    margin-left: 10px;
-                }
-                @include mobile-only {
-                    margin-left: 10px;
-                }
+                max-height: 100px;
                 & .annonce2__photo2 {
-                    position: relative;
-                    width: 140px;
-                    max-width: 140px;
-                    height: 140px;
-                    @include middle {
-                        width: 300px;
-                        max-width: 300px;
-                        min-width: 160px;
-                        height: 140px;
+                    flex-basis: 40%;
+                    position: relative;                 
+                    & > div {
+                        max-height: 100px;
+                        @include large {
+                            max-height: 100px;
+                        }
+                        @include middle {
+                            flex-basis: 60%;
+                            max-height: 100px;
+                        }
+                        @include mobile-only {
+                            max-height: 100px;
+                        }
                     }
-                    @include mobile-only {
-                        width: 170px;
-                        max-width: 300px;
-                        height: 125px;
+                    @include large {
+                        flex-basis: 40%;
                     }
                 }
                 & .annonce2__details {
-                    position: relative;
-                    display: flex;
-                    flex-direction : column;
-                    justify-content: flex-end;
-                    width: 100%;
+                    flex-basis: 60%;
                     font-weight: bold;
-                    padding-right: 7px;
-                    //max-width: 210px;
+                    padding: 8px;
+                    padding-left: 11px;
+                    @include large {
+                        flex-basis: 60%;
+                    }
                     &__container {
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
-                        align-content: flex-end;
-                        height: 140px;
-                        @include mobile-only {
-                            height: 120px;
-                        }
                     }
                     &--nom {
-                        padding-top: 7px;
-                        padding-left: 7px;
-                        flex-basis: 20%;
                         font-weight: 700;
                         font-size: 1.1em;
-                        @include middle {
-                            padding-left: 29px;
-                        }
-                        @include mobile-only {
-                            padding-left: 19px;
-                            font-size: smaller;
-                        }
                     }
                     &--prix {
-                        padding-top: 7px;
-                        padding-left: 7px;
-                        flex-basis: 60%;
                         font-size: .8em;
                         font-weight: normal;
-                        @include middle {
-                            padding-left: 29px;
-                        }
-                        @include mobile-only {
-                            padding-left: 19px;
-                            font-size: smaller;
-                        }
                     }
                     &--stars {
-                        flex-basis: 20%;
                         @include middle {
                             padding-left: 27px;
                         }
@@ -856,83 +753,16 @@ main {
     flex-basis: 10%;
     align-self: flex-start;
     @include middle {
-        padding-left: 25px;
+        padding-left: 0;
+    }
+    @include large {
+        flex-basis: 100%;
     }
 }
 #elem1, #elem2, #elem3 {
     flex-basis: 30%;
-}
-
-.item--fraction1, .item--fraction2, .item--fraction3 {
-    position: relative;
-    &:hover {
-        cursor: pointer;
-    }
     @include large {
-        //flex-basis: 50%;
-    }
-    @include middle {
         flex-basis: 100%;
-    }
-    @include mobile-only {
-        flex-basis: 100%;
-        //max-width: 300px;
-    }
-}
-.item--fraction6, .item--fraction7 {
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        //flex-basis: 50%;
-    }
-    @include middle {
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        //max-width: 300px;
-        flex-basis: 100%;
-    }
-}
-
-.item--fraction4 {
-    &:hover {
-        cursor: pointer;
-    }
-    position: absolute;
-    clip: rect(0,0,0,0);
-    @include large {
-        position: relative;
-        //flex-basis: 50%;
-    }
-    @include middle {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include mobile-only {
-        position: absolute;
-        clip: rect(0,0,0,0);
-    }
-}
-
-.item--fraction5 {
-    &:hover {
-        cursor: pointer;
-    }
-    position: relative;
-    @include large {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include middle {
-        position: relative;
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        position: relative;
-        flex-basis: 100%;
-        //max-width: 300px;
-        //flex-basis: 100%;
     }
 }
 
@@ -956,8 +786,6 @@ main {
         display: flex;
         justify-content: center;
         align-items: stretch;
-        height: 500px;
-        //margin-left: 15px;
         padding-top: 5px;
         @include middle {
             flex-wrap: wrap;
@@ -1162,7 +990,6 @@ main {
 }
 #c1 {
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1175,7 +1002,6 @@ main {
         margin-right: 9px;
     }
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1190,7 +1016,6 @@ main {
         margin-left: 9px;
     }
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1201,7 +1026,6 @@ main {
 }
 #c4 {
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1213,7 +1037,6 @@ main {
 #c5 {
     margin-right: 9px;
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1228,7 +1051,6 @@ main {
         margin-left: 9px;
     }
     @include mobile-only {
-        //flex-basis: 100%;
         align-items: stretch;
         justify-content: stretch;
         padding-left: 0px;
@@ -1237,15 +1059,12 @@ main {
         margin-bottom: 20px;
     }
 }
-footer {
-    height: 450px;
-}
+
 .pied-de-page {
     background-color: $color-background;
     display: flex;
     justify-content: flex-start;
     @include mobile-only {
-        margin-top: 720px;
         flex-wrap: wrap;
     }
     &__apropos {
@@ -1305,6 +1124,7 @@ footer {
 }
 .click-photo1 {
     position: absolute;
+    z-index: 10;
     width: 100%;
     height: 100%;
     top: 0;
