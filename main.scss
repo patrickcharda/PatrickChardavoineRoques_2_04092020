@@ -26,9 +26,8 @@ $photos__ville: ("#img1":"./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-
 "#img2":"./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg",
 "#img3":"./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg",
 "#img4":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img5":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img6":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
-"#img7":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
+"#img5":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
+"#img6":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
 "#img11":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
 );
 $photos__populaires: ("#img8":"./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg",
@@ -152,7 +151,6 @@ main {
     @include mobile-only {
         margin-left: 0;
         margin-right: 0;
-        //margin-bottom: -5px;
     }
 }
 
@@ -499,6 +497,9 @@ main {
                 padding-right: 15px;
                 
             }
+            @include mobile-only {
+                padding-left: 30px;
+            }
             & .heading, .plus {
                 align-self: flex-start;
                 padding-left: 25px;
@@ -510,14 +511,21 @@ main {
                 position: relative;
                 display: flex;
                 justify-content: space-around;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-left: 10px;
+                & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                    flex-basis: 30%;
+                }
                 @include large {
                     flex-wrap: wrap;
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                        flex-basis: 50%;
+                    }
                 }
                 @include middle {
                     flex-wrap: wrap;
-                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6, .item--fraction7 {
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
                         flex-basis: 100%;
                     }
                 }
@@ -537,22 +545,6 @@ main {
                         background-color: white;
                         border: 0;
                     }
-                    /*@include middle {
-                        background-color: white;
-                        position: relative;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                    }
-                    @include mobile-only {
-                        position: relative;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        margin: 0 0 20px 0;
-                        //background-color: $color-background;
-                    }*/
                     &__photo1 {
                         position: relative;
                         flex-shrink: 1;
@@ -563,35 +555,6 @@ main {
                             flex-shrink: 1;
                             flex-grow: 1;
                         }
-                        /*@include middle {  
-                            flex-shrink: 0;
-                            & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-                                border-top-left-radius: 15px;
-                                border-top-right-radius: 0;
-                                border-bottom-left-radius: 15px;
-                                width: 300px;
-                            }
-                        @include mobile-only {
-                            display: flex;
-                            flex-basis: 100%;
-                            flex-shrink: 1;
-                            flex-grow: 1;
-                            & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-                                border-top-left-radius: 15px;
-                                border-top-right-radius: 15px;
-                                border-bottom-left-radius: 0;
-                                flex-basis: 100%;
-                                flex-grow: 1;
-                                width: 100%;
-                                max-width: 100%;
-                                //min-width: 160px;
-                            }
-                        }
-                        }*/
-                        /*@include large {
-                            max-width: 300px;
-                            flex-shrink: 1;
-                        }*/
                     }
                     &__details {
                         display: flex;
@@ -601,48 +564,13 @@ main {
                         &__nom {
                             font-size: 1.1em;
                             font-weight: 700;
-                            /*@include middle {
-                                position: absolute;
-                                left: 320px;
-                                top: 15px;
-                            }
-                            @include mobile-only {
-                                flex-basis: 100%;
-                                position: relative;
-                                left: 0;
-                                top: 0;
-                                font-size: smaller;
-                                //align-self: flex-start;
-                            }*/
                         }
                         &__prix {
                             font-size: .8em;
-                            /*@include middle {
-                                position: absolute;
-                                left: 320px;
-                                top: 50px;
-                            }
-                            @include mobile-only {
-                                flex-basis: 100%;
-                                position: relative;
-                                left: 0;
-                                top: 0;
-                            }*/
                         }
                         &__stars {
                             padding-left: 9px;
                             padding-top: 15px;
-                            /*@include middle {
-                                position: absolute;
-                                left: 320px;
-                                top: 70px;
-                            }
-                            @include mobile-only {
-                                flex-basis: 100%;
-                                position: relative;
-                                left: 0;
-                                top: 0;
-                            }*/
                             & .bluestar {
                                 display: inline-block;
                                 position: relative;
@@ -708,9 +636,6 @@ main {
             flex-direction: column;
             align-items: stretch;
             justify-content: stretch;
-            /*@include middle {
-                align-items: stretch;
-            }*/
             @include large {
                 display: flex;
                 flex-direction: row;
@@ -725,48 +650,26 @@ main {
                 justify-content: flex-start;
                 background-color: white;
                 border-radius: 20px;
-                /*@include middle {
-                    margin-left: 10px;
-                }
-                @include mobile-only {
-                    margin-left: 10px;
-                }*/
+                max-height: 100px;
                 & .annonce2__photo2 {
-                    flex-basis: 40%;                 
+                    flex-basis: 40%;
+                    position: relative;                 
                     & > div {
-                        max-height: 140px;
-                        max-width: 110px;
-                        min-width: 80px;
+                        max-height: 100px;
                         @include large {
-                            max-height: 140px;
-                            max-width: 110px;
-                            min-width: 80px;
+                            max-height: 100px;
                         }
                         @include middle {
-                            max-height: 140px;
-                            max-width: 200px;
-                            min-width: 80px;
+                            flex-basis: 60%;
+                            max-height: 100px;
                         }
                         @include mobile-only {
-                            max-height: 140px;
-                            max-width: 110px;
-                            min-width: 80px;
+                            max-height: 100px;
                         }
                     }
                     @include large {
                         flex-basis: 40%;
                     }
-                    /*@include middle {
-                        width: 300px;
-                        max-width: 300px;
-                        min-width: 160px;
-                        height: 140px;
-                    }
-                    @include mobile-only {
-                        width: 170px;
-                        max-width: 300px;
-                        height: 125px;
-                    }*/
                 }
                 & .annonce2__details {
                     flex-basis: 60%;
@@ -780,33 +683,14 @@ main {
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
-                        //align-content: flex-end;
-                        //height: 140px;
-                        /*@include mobile-only {
-                            height: 120px;
-                        }*/
                     }
                     &--nom {
                         font-weight: 700;
                         font-size: 1.1em;
-                        /*@include middle {
-                            padding-left: 29px;
-                        }
-                        @include mobile-only {
-                            padding-left: 19px;
-                            font-size: smaller;
-                        }*/
                     }
                     &--prix {
                         font-size: .8em;
                         font-weight: normal;
-                        /*@include middle {
-                            padding-left: 29px;
-                        }
-                        @include mobile-only {
-                            padding-left: 19px;
-                            font-size: smaller;
-                        }*/
                     }
                     &--stars {
                         @include middle {
@@ -878,79 +762,6 @@ main {
 #elem1, #elem2, #elem3 {
     flex-basis: 30%;
     @include large {
-        flex-basis: 100%;
-    }
-}
-
-.item--fraction1, .item--fraction2, .item--fraction3 {
-    position: static;
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        flex-basis: 50%;
-    }
-    @include middle {
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        flex-basis: 100%;
-    }
-}
-.item--fraction6, .item--fraction7 {
-    position: static;
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        flex-basis: 50%;
-    }
-    @include middle {
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        flex-basis: 100%;
-    }
-}
-
-.item--fraction4 {
-    position: absolute;
-    clip: rect(0,0,0,0);
-    @include large {
-        position: static;
-        flex-basis: 50% ;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    @include middle {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include mobile-only {
-        position: absolute;
-        clip: rect(0,0,0,0);
-    }
-}
-
-.item--fraction5 {
-    position: static;
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include middle {
-        position: relative;
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        position: relative;
         flex-basis: 100%;
     }
 }
