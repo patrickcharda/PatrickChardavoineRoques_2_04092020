@@ -588,6 +588,7 @@ main #img17 {
   .hebergement__container--item__ville {
     max-width: none;
     flex-basis: 100%;
+    background-color: white;
   }
 }
 .hebergement__container--item__ville .annonces__container {
@@ -646,6 +647,7 @@ main #img17 {
 @media only screen and (max-width: 620px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container {
     padding-right: 10px;
+    margin-left: 0px;
   }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
@@ -662,6 +664,12 @@ main #img17 {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
     background-color: white;
     border: 0;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
+    margin: 0 0 20px 0;
+    box-shadow: 3px 3px 7px #aca8a8;
   }
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 {
