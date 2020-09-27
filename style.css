@@ -602,6 +602,11 @@ main #img17 {
     padding-right: 15px;
   }
 }
+@media only screen and (max-width: 620px) {
+  .hebergement__container--item__ville .annonces__container {
+    padding-left: 30px;
+  }
+}
 .hebergement__container--item__ville .annonces__container .heading, .hebergement__container--item__ville .annonces__container .plus {
   align-self: flex-start;
   padding-left: 25px;
@@ -652,22 +657,6 @@ main #img17 {
   border-radius: 15px;
   border: 1px solid #ffffff;
   margin: 0 15px 25px 0;
-  /*@include middle {
-      background-color: white;
-      position: relative;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-  }
-  @include mobile-only {
-      position: relative;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 0 0 20px 0;
-      //background-color: $color-background;
-  }*/
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1 {
@@ -680,35 +669,6 @@ main #img17 {
   flex-shrink: 1;
   flex-grow: 1;
   height: 125px;
-  /*@include middle {  
-      flex-shrink: 0;
-      & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-          border-top-left-radius: 15px;
-          border-top-right-radius: 0;
-          border-bottom-left-radius: 15px;
-          width: 300px;
-      }
-  @include mobile-only {
-      display: flex;
-      flex-basis: 100%;
-      flex-shrink: 1;
-      flex-grow: 1;
-      & #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img11 {
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
-          border-bottom-left-radius: 0;
-          flex-basis: 100%;
-          flex-grow: 1;
-          width: 100%;
-          max-width: 100%;
-          //min-width: 160px;
-      }
-  }
-  }*/
-  /*@include large {
-      max-width: 300px;
-      flex-shrink: 1;
-  }*/
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__photo1 #img1 {
   position: absolute;
@@ -809,48 +769,13 @@ main #img17 {
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__nom {
   font-size: 1.1em;
   font-weight: 700;
-  /*@include middle {
-      position: absolute;
-      left: 320px;
-      top: 15px;
-  }
-  @include mobile-only {
-      flex-basis: 100%;
-      position: relative;
-      left: 0;
-      top: 0;
-      font-size: smaller;
-      //align-self: flex-start;
-  }*/
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__prix {
   font-size: 0.8em;
-  /*@include middle {
-      position: absolute;
-      left: 320px;
-      top: 50px;
-  }
-  @include mobile-only {
-      flex-basis: 100%;
-      position: relative;
-      left: 0;
-      top: 0;
-  }*/
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars {
   padding-left: 9px;
   padding-top: 15px;
-  /*@include middle {
-      position: absolute;
-      left: 320px;
-      top: 70px;
-  }
-  @include mobile-only {
-      flex-basis: 100%;
-      position: relative;
-      left: 0;
-      top: 0;
-  }*/
 }
 .hebergement__container--item__ville .annonces__container--item .photos1__container .annonce1__details__stars .bluestar {
   display: inline-block;
@@ -916,9 +841,6 @@ main #img17 {
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
-  /*@include middle {
-      align-items: stretch;
-  }*/
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire .annonces__container {
@@ -936,51 +858,29 @@ main #img17 {
   justify-content: flex-start;
   background-color: white;
   border-radius: 20px;
-  /*@include middle {
-      margin-left: 10px;
-  }
-  @include mobile-only {
-      margin-left: 10px;
-  }*/
+  max-height: 100px;
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 {
   flex-basis: 40%;
-  /*@include middle {
-      width: 300px;
-      max-width: 300px;
-      min-width: 160px;
-      height: 140px;
-  }
-  @include mobile-only {
-      width: 170px;
-      max-width: 300px;
-      height: 125px;
-  }*/
+  position: relative;
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
-  max-height: 140px;
-  max-width: 110px;
-  min-width: 80px;
+  max-height: 100px;
 }
 @media only screen and (max-width: 1200px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
-    max-height: 140px;
-    max-width: 110px;
-    min-width: 80px;
+    max-height: 100px;
   }
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
-    max-height: 140px;
-    max-width: 200px;
-    min-width: 80px;
+    flex-basis: 60%;
+    max-height: 100px;
   }
 }
 @media only screen and (max-width: 620px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__photo2 > div {
-    max-height: 140px;
-    max-width: 110px;
-    min-width: 80px;
+    max-height: 100px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -1003,31 +903,14 @@ main #img17 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /*@include mobile-only {
-      height: 120px;
-  }*/
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--nom {
   font-weight: 700;
   font-size: 1.1em;
-  /*@include middle {
-      padding-left: 29px;
-  }
-  @include mobile-only {
-      padding-left: 19px;
-      font-size: smaller;
-  }*/
 }
 .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--prix {
   font-size: 0.8em;
   font-weight: normal;
-  /*@include middle {
-      padding-left: 29px;
-  }
-  @include mobile-only {
-      padding-left: 19px;
-      font-size: smaller;
-  }*/
 }
 @media only screen and (max-width: 920px) {
   .hebergement__container--item__populaire .annonces__container .annonce2__container .annonce2__details--stars {
@@ -1111,21 +994,6 @@ main #img17 {
   }
 }
 
-/*.item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        flex-basis: 50%;
-    }
-    @include middle {
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        flex-basis: 100%;
-    }
-}*/
 .afficherplus {
   text-decoration: none;
   font-weight: 600;
