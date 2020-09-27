@@ -26,9 +26,8 @@ $photos__ville: ("#img1":"./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-
 "#img2":"./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg",
 "#img3":"./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg",
 "#img4":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img5":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg",
-"#img6":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
-"#img7":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
+"#img5":"./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg",
+"#img6":"./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg",
 "#img11":"./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
 );
 $photos__populaires: ("#img8":"./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg",
@@ -510,14 +509,21 @@ main {
                 position: relative;
                 display: flex;
                 justify-content: space-around;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-left: 10px;
+                & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                    flex-basis: 30%;
+                }
                 @include large {
                     flex-wrap: wrap;
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
+                        flex-basis: 50%;
+                    }
                 }
                 @include middle {
                     flex-wrap: wrap;
-                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6, .item--fraction7 {
+                    & .item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
                         flex-basis: 100%;
                     }
                 }
@@ -882,8 +888,7 @@ main {
     }
 }
 
-.item--fraction1, .item--fraction2, .item--fraction3 {
-    position: static;
+/*.item--fraction1, .item--fraction2, .item--fraction3, .item--fraction4, .item--fraction5, .item--fraction6 {
     flex-basis: 33.33%;
     &:hover {
         cursor: pointer;
@@ -897,63 +902,7 @@ main {
     @include mobile-only {
         flex-basis: 100%;
     }
-}
-.item--fraction6, .item--fraction7 {
-    position: static;
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        flex-basis: 50%;
-    }
-    @include middle {
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        flex-basis: 100%;
-    }
-}
-
-.item--fraction4 {
-    position: absolute;
-    clip: rect(0,0,0,0);
-    @include large {
-        position: static;
-        flex-basis: 50% ;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    @include middle {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include mobile-only {
-        position: absolute;
-        clip: rect(0,0,0,0);
-    }
-}
-
-.item--fraction5 {
-    position: static;
-    flex-basis: 33.33%;
-    &:hover {
-        cursor: pointer;
-    }
-    @include large {
-        position: absolute;
-        clip: rect(0,0,0,0);   
-    }
-    @include middle {
-        position: relative;
-        flex-basis: 100%;
-    }
-    @include mobile-only {
-        position: relative;
-        flex-basis: 100%;
-    }
-}
+}*/
 
 .afficherplus {
     text-decoration: none;
