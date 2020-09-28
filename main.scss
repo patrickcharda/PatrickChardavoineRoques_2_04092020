@@ -166,6 +166,9 @@ main {
                 @include middle {
                     padding-left: 15px;
                 }
+                @include mobile-only{
+                    padding-left: 1px;
+                }
             }
             &--item .photos1__container {
                 position: relative;
@@ -208,7 +211,9 @@ main {
                     }
                     @include mobile-only {
                         margin: 0 0 20px 0;
-                        box-shadow: 3px 3px 7px rgb(172, 168, 168);
+                        //box-shadow: 3px 3px 7px rgb(172, 168, 168);
+                        border: 5px solid rgb(172, 168, 168, .1);
+                        //background-clip: border-box;
                     }
                     &__photo1 {
                         position: relative;
@@ -430,6 +435,16 @@ main {
         flex-basis: 100%;
     }
 }
+#elem2, #elem3 {
+    margin-top: 75px;
+    @include middle {
+        margin-top: 25px;
+    }
+    @include mobile-only {
+        margin-top: 10px;
+    }
+}
+
 
 .afficherplus {
     text-decoration: none;
