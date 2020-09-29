@@ -20,6 +20,13 @@
     }
 }
 
+/*xlarge*/
+@mixin xlarge {
+    @media only screen and (max-width: map-get($breakpoints, "xlarge")) {
+        @content;
+    }
+}
+
 /*photos hébergements ville*/
 @mixin photos($photos__v) {
     @each $key,$value in $photos__v {
