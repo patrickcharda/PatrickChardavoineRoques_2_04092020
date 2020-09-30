@@ -494,7 +494,7 @@ main {
                     max-width: 460px;
                     width: 150px;
                     min-width: 150px;
-                    height: 340px;
+                    height: 360px;
                     @include large {
                         max-width: 400px;
                     }
@@ -541,7 +541,7 @@ main {
                         padding-top: 27px;
                     }
                     @include large {
-                       height: 60px; 
+                       //height: 60px; 
                     }
                 }
             }
@@ -621,7 +621,7 @@ main {
                                 padding-top: 27px;
                             }
                             @include large {
-                                height: 60px;
+                                //height: 60px;
                             }  
                         }
                     }
@@ -692,6 +692,9 @@ main {
 }
 #c2 {
     position: relative;
+    @include large {
+        margin-bottom: 0px;
+    }
     @include middle {
         margin-right: 9px;
     }
@@ -706,7 +709,9 @@ main {
 }
 #c3 {
     position: relative;
+    margin-top: 20px;
     @include middle {
+        margin-top: 0px;
         margin-right: 0px;
         margin-left: 9px;
     }
@@ -733,6 +738,9 @@ main {
 #c5 {
     position: relative;
     margin-right: 9px;
+    @include large {
+        margin-bottom: 0px;
+    }
     @include mobile-only {
         align-items: stretch;
         justify-content: stretch;
@@ -744,7 +752,9 @@ main {
 }
 #c6 {
     position: relative;
+    margin-top: 20px;
     @include middle {
+        margin-top: 0px;
         margin-right: 0px;
         margin-left: 9px;
     }
