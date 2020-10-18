@@ -232,7 +232,7 @@ main {
                         flex-wrap: nowrap;
                         padding: 8px;
                         &__nom {
-                            font-size: 1.1em;
+                            font-size: 1em;
                             font-weight: 700;
                         }
                         &__prix {
@@ -320,7 +320,7 @@ main {
                 justify-content: flex-start;
                 background-color: white;
                 border-radius: 20px;
-                max-height: 100px;
+                max-height: 150px;
                 & .annonce2__photo2 {
                     flex-basis: 40%;
                     position: relative;                 
@@ -356,7 +356,7 @@ main {
                     }
                     &--nom {
                         font-weight: 700;
-                        font-size: 1.1em;
+                        font-size: 1em;
                     }
                     &--prix {
                         font-size: .8em;
