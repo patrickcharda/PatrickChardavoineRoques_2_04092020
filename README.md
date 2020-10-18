@@ -1,5 +1,5 @@
 Reservia
-Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de la formation de développeur web dispensée par Openclassrooms.
+Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de la formation 100% à distance de développeur web, dispensée par Openclassrooms.
 
 Résultat de l'intégration :
 https://patrickcharda.github.io/Reservia/
