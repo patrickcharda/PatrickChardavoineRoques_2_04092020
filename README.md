@@ -1,10 +1,10 @@
-Reservia
+**Reservia**
 Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de la formation 100% à distance de développeur web, dispensée par Openclassrooms.
 
 Résultat de l'intégration :
 https://patrickcharda.github.io/Reservia/
 
-![Maquette de site web - Reservia](https://patrickcharda/Reservia/blob/master/overview.png)
+![Maquette de site web - Reservia](https://github.com/patrickcharda/Reservia/blob/master/overview.png)
 
 
 Cahier des charges :
