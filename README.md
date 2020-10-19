@@ -4,6 +4,10 @@ Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de
 Résultat de l'intégration :
 https://patrickcharda.github.io/Reservia/
 
+![Reservia ](/patrickcharda/Reservia/blob/master/overview.png)
+Format: ![Alt Maquette de site Web - Reservia](https://patrickcharda.github.io/Reservia/)
+
+
 Cahier des charges :
 
 - intégration full html css - frameworks interdits
