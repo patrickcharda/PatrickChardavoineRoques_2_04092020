@@ -1,4 +1,4 @@
-**Reservia**
+##Reservia##
 
 Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de la formation 100% à distance de développeur web, dispensée par Openclassrooms.
 
@@ -8,7 +8,7 @@ https://patrickcharda.github.io/Reservia/
 ![Maquette de site web - Reservia](https://github.com/patrickcharda/Reservia/blob/master/overview.png)
 
 
-Cahier des charges :
+##Cahier des charges##
 
 - intégration full html css - frameworks interdits
 - Javascript interdit
@@ -25,7 +25,7 @@ Cahier des charges :
 - code versionné via Git - dépôt distant sur Github ou Gitlab
 - Github page ou Gitlab page active
 
-Notes de réalisation :
+##Notes de réalisation##
 
 - 100% Flexbox
 - 100% Sass
