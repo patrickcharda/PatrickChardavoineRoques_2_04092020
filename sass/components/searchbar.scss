@@ -56,6 +56,18 @@
             font-weight: bold;
             background-color: $color-primary;
             color: #ffffff;
+            span {
+                @include mobile-only {
+                    display: none;
+                }
+            }
+            > svg {
+                display: none;
+                @include mobile-only {
+                    display: inline-block;
+                }
+            }
+            
         }
     }
 }

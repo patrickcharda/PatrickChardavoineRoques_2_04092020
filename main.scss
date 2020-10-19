@@ -232,7 +232,7 @@ main {
                         flex-wrap: nowrap;
                         padding: 8px;
                         &__nom {
-                            font-size: 1.1em;
+                            font-size: 1em;
                             font-weight: 700;
                         }
                         &__prix {
@@ -320,21 +320,21 @@ main {
                 justify-content: flex-start;
                 background-color: white;
                 border-radius: 20px;
-                max-height: 100px;
+                max-height: 150px;
                 & .annonce2__photo2 {
                     flex-basis: 40%;
                     position: relative;                 
                     & > div {
-                        max-height: 100px;
+                        max-height: 250px;
                         @include large {
-                            max-height: 100px;
+                            max-height: 200px;
                         }
                         @include middle {
                             flex-basis: 60%;
-                            max-height: 100px;
+                            max-height: 150px;
                         }
                         @include mobile-only {
-                            max-height: 100px;
+                            max-height: 150px;
                         }
                     }
                     @include large {
@@ -356,7 +356,7 @@ main {
                     }
                     &--nom {
                         font-weight: 700;
-                        font-size: 1.1em;
+                        font-size: 1em;
                     }
                     &--prix {
                         font-size: .8em;
@@ -491,12 +491,15 @@ main {
                 &--item-img {
                     flex-basis: 100%;
                     position: relative;
-                    max-width: 400px;
+                    max-width: 460px;
                     width: 150px;
                     min-width: 150px;
-                    height: 320px;
+                    height: 360px;
+                    @include large {
+                        max-width: 400px;
+                    }
                     @include middle {
-                        height: 120px;
+                        height: 130px;
                         max-width: 400px;
                         width: 150px;
                     }
@@ -517,7 +520,7 @@ main {
                     flex-basis: 100%;
                     max-width: 400px;
                     width: 150px;
-                    height: 60px;
+                    height: 80px;
                     min-width: 150px;
                     font-weight: 700;
                     padding-left: 9px;
@@ -536,6 +539,9 @@ main {
                         box-shadow: 0 0 5px rgb(172, 168, 168);
                         border-top: none;
                         padding-top: 27px;
+                    }
+                    @include large {
+                       //height: 60px; 
                     }
                 }
             }
@@ -564,7 +570,7 @@ main {
                         &--item-img {
                             position: relative;
                             flex-basis: 100%;
-                            max-width: 400px;
+                            max-width: 460px;
                             min-width: 150px;
                             width: 150px;
                             height: 120px;
@@ -584,6 +590,9 @@ main {
                                 border-top-right-radius: 15px;
                                 border-bottom: none;
                             }
+                            @include large {
+                                height: 130px;
+                            }
                         }
                         &--item-point-d-interet2 {
                             position: relative;
@@ -591,7 +600,7 @@ main {
                             max-width: 400px;
                             min-width: 150px;
                             width: 150px;
-                            height: 60px;
+                            height: 80px;
                             padding-left: 9px;
                             padding-top: 24px;
                             font-weight: 700;
@@ -610,6 +619,9 @@ main {
                                 box-shadow: 0 0 5px rgb(172, 168, 168);
                                 border-top: none;
                                 padding-top: 27px;
+                            }
+                            @include large {
+                                //height: 60px;
                             }  
                         }
                     }
@@ -669,6 +681,7 @@ main {
     }
 }
 #c1 {
+    position: relative;
     @include mobile-only {
         align-items: stretch;
         justify-content: stretch;
@@ -678,6 +691,10 @@ main {
     }
 }
 #c2 {
+    position: relative;
+    @include large {
+        margin-bottom: 0px;
+    }
     @include middle {
         margin-right: 9px;
     }
@@ -691,7 +708,10 @@ main {
     }
 }
 #c3 {
+    position: relative;
+    margin-top: 20px;
     @include middle {
+        margin-top: 0px;
         margin-right: 0px;
         margin-left: 9px;
     }
@@ -705,6 +725,7 @@ main {
     }
 }
 #c4 {
+    position: relative;
     @include mobile-only {
         align-items: stretch;
         justify-content: stretch;
@@ -715,7 +736,11 @@ main {
     }
 }
 #c5 {
+    position: relative;
     margin-right: 9px;
+    @include large {
+        margin-bottom: 0px;
+    }
     @include mobile-only {
         align-items: stretch;
         justify-content: stretch;
@@ -726,7 +751,10 @@ main {
     }
 }
 #c6 {
+    position: relative;
+    margin-top: 20px;
     @include middle {
+        margin-top: 0px;
         margin-right: 0px;
         margin-left: 9px;
     }
