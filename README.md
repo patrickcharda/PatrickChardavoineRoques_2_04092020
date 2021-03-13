@@ -5,7 +5,7 @@ Projet d'intégration de la maquette d'une entreprise virtuelle dans le cadre de
 Résultat de l'intégration sur la Github page :
 https://patrickcharda.github.io/Reservia/
 
-ou sur mon hébergement :
+ou ici :
 https://reservia.by-webcycle.fr
 
 ![Maquette de site web - Reservia](https://github.com/patrickcharda/Reservia/blob/master/overview.png)
